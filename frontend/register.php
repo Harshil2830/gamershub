@@ -28,6 +28,8 @@ if($response == 1){
 } else {
 	$error = date("Y-m-d") . "  " . date("h:i:sa") . " --- Frontend --- " . "Error: failed to login using Username = " . $_POST["uname"] . " and Password = " . $_POST["psw"] . "\n";
 	log_event($error);
+	session_unset();
+	session_destroy();
 	header("Location: failed.html");
 	die();
 }
