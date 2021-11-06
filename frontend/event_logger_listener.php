@@ -23,15 +23,15 @@ function requestProcessor($request)
   {
     case "event_log":
       doLog($request['error_message']);
-    default:
+    /*default:
       $event = date("Y-m-d") . "  " . date("h:i:sa") . " --- Frontend --- " . "Server received request but request type does not match" . "\n";
-      log_event($event);
+      log_event($event);*/
   }
   
   return array("returnCode" => '0', 'message'=>"Server received request and processed");
 }
 
-$server = new rabbitMQServer("testRabbitMQ.ini","testServer");
+$server = new rabbitMQServer("testfront.ini","testServer");
 
 $server->process_requests('requestProcessor');
 exit();
