@@ -1,4 +1,5 @@
 <?php
+require_once('event_logger.php');
 
 class loginDB
 {
@@ -10,6 +11,8 @@ public function __construct()
 
 	if ($this->logindb->connect_errno != 0)
 	{
+		$event = date("Y-m-d") . "  " . date("h:i:sa") . " --- DataBase --- " . "Error connecting to database: ".$this->logindb->connect_error.PHP_EOL . "\n";
+    		log_event($event);
 		echo "Error connecting to database: ".$this->logindb->connect_error.PHP_EOL;
 		exit(1);
 	}
@@ -31,8 +34,13 @@ public function validateLogin($username,$password)
 			echo "passwords match for $username".PHP_EOL;
 			return 1;// password match
 		}
+		$event = date("Y-m-d") . "  " . date("h:i:sa") . " --- DataBase --- " . "passwords did not match for $username" . "\n";
+		log_event($event);
 		echo "passwords did not match for $username".PHP_EOL;
 	}}
+	
+	$event = date("Y-m-d") . "  " . date("h:i:sa") . " --- DataBase --- " . "no users matched username" . "\n";
+	log_event($event);
 	return 0;//no users matched username
 }
 }
