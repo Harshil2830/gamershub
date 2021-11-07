@@ -8,7 +8,7 @@ require_once('get_host_info.inc');
 require_once('rabbitMQLib.inc');
 require_once('event_logger.php');
 
-$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
+$client = new rabbitMQClient("database.ini","testServer");
 
 
 $request = array();
