@@ -1,6 +1,7 @@
 <?php
 
 require_once('get_host_info.inc');
+require_once('event_logger.php');
 
 class rabbitMQServer
 {
@@ -82,6 +83,8 @@ class rabbitMQServer
 		}
 		catch(Exception $e)
 		{
+		 $event = date("Y-m-d") . "  " . date("h:i:sa") . " --- DMZ --- " . "error: rabbitMQServer: process_message: exception caught: ".$e. "\n";
+      log_event($event);
 			// ampq throws exception if get fails...
             echo "error: rabbitMQServer: process_message: exception caught: ".$e;
 		}
@@ -129,6 +132,8 @@ class rabbitMQServer
 		}
 		catch (Exception $e)
 		{
+		$event = date("Y-m-d") . "  " . date("h:i:sa") . " --- DMZ --- " . "Failed to start request processor: ".$e. "\n";
+      log_event($event);
 			trigger_error("Failed to start request processor: ".$e,E_USER_ERROR); 
 		}
 	}
@@ -229,6 +234,8 @@ class rabbitMQClient
 		}
 		catch(Exception $e)
 		{
+		$event = date("Y-m-d") . "  " . date("h:i:sa") . " --- DMZ --- " . "failed to send message to exchange: ". $e->getMessage(). "\n";
+      log_event($event);
 			die("failed to send message to exchange: ". $e->getMessage()."\n");
 		}
 	}
@@ -264,6 +271,8 @@ class rabbitMQClient
 		}
 		catch(Exception $e)
 		{
+		$event = date("Y-m-d") . "  " . date("h:i:sa") . " --- DMZ --- " . "failed to send message to exchange: ". $e->getMessage(). "\n";
+      log_event($event);
 			die("failed to send message to exchange: ". $e->getMessage()."\n");
 		}
 	}
