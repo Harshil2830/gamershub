@@ -17,14 +17,14 @@
     	//send error to database server
     	$db = new rabbitMQClient("testRabbitMQ.ini","testServer");
     	$response = $db->publish($request);
-    	
+    	/*
     	//send error to dmz server
-    	$dmz = new rabbitMQClient("frontend.ini","testServer");
+    	$dmz = new rabbitMQClient("dmz.ini","testServer");
     	$response = $dmz->publish($request);
     	
     	//send error to RabbitMQ server
     	$rbmq = new rabbitMQClient("rabbitMQ.ini","testServer");
     	$response = $rbmq->publish($request);
-    	
+    	*/
     }
 ?>
