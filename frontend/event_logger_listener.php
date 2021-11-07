@@ -31,7 +31,7 @@ function requestProcessor($request)
   return array("returnCode" => '0', 'message'=>"Server received request and processed");
 }
 
-$server = new rabbitMQServer("testfront.ini","testServer");
+$server = new rabbitMQServer("frontend.ini","testServer");
 
 $server->process_requests('requestProcessor');
 exit();
