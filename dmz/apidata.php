@@ -3,9 +3,6 @@
 
 function getcsgo($platform, $id){
 
-$platform = "steam";
-$id = "7656119806918068";
-
 $url = "https://public-api.tracker.gg/v2/csgo/standard/profile/".$platform."/".$id."?TRN-Api-Key=09b1df56-5bb1-4d79-8b7e-da2eb3ffcabe";
 
 $data = file_get_contents($url);
@@ -24,10 +21,7 @@ if($data === FALSE){
 	}
 }
 
-/*
 function getapex($platform, $id){
-$platform = "origin";
-$id = "FunX10";
 
 $url = "https://public-api.tracker.gg/v2/apex/standard/profile/".$platform."/".$id."?TRN-Api-Key=09b1df56-5bb1-4d79-8b7e-da2eb3ffcabe";
 
@@ -47,11 +41,12 @@ if($data === FALSE){
 		
 		}
 }
-		*/
-/*
+	
+
 function getsplitgate($platform, $id){
 
-$url = "https://public-api.tracker.gg/v2/splitgate/standard/profile/".$platform."/".$id."?TRN-Api-Key=09b1df56-5bb1-4d79-8b7e-da2eb3ffcabe"
+
+$url = "https://public-api.tracker.gg/v2/splitgate/standard/profile/".$platform."/".$id."?TRN-Api-Key=09b1df56-5bb1-4d79-8b7e-da2eb3ffcabe";
 
 $data = file_get_contents($url);
 
@@ -69,5 +64,5 @@ if($data === FALSE){
 		
 		}
 }
-		*/
+
 ?>
