@@ -41,6 +41,7 @@ public function validateLogin($username,$password)
 	
 	$event = date("Y-m-d") . "  " . date("h:i:sa") . " --- DataBase --- " . "no users matched username" . "\n";
 	log_event($event);
+	echo "no users matched username".PHP_EOL;
 	return 0;//no users matched username
 }
 }
