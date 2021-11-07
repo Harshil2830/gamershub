@@ -12,9 +12,13 @@ session_start();
 <body>
 <span id="session_usr" style="display:none;"><?php if(isset($_SESSION["username"])) {echo $_SESSION["username"];} ?></span>
 <div class="topnav" id="myTopnav">
-  <a href="index.php" class="active">Home</a>
+  <a href="index.php" class="active">CSGO</a>
+  <a href="index.php" class="active">Game 2</a>
+  <a href="index.php" class="active">Game 3</a>
+  <a href="index.php" class="active">Events</a>
   <a id="login" style="display:block;" onclick="document.getElementById('id01').style.display='block'">Login</a>
   <a id="register" style="display:block;" onclick="document.getElementById('id02').style.display='block'">Register</a>
+  <a id="profile" href="profile.php" style="display:none;">Profile</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
@@ -95,6 +99,7 @@ function myFunction() {
 if (document.getElementById('session_usr').innerHTML != ""){
 	document.getElementById('login').style.display='none';
 	document.getElementById('register').style.display='none';
+	document.getElementById('profile').style.display='block';
 }
 </script>
 </body>
