@@ -16,23 +16,24 @@ $request['type'] = "login";
 $request['username'] = $_POST["uname"];
 $request['password'] = $_POST["psw"];
 $response = $client->send_request($request);
-//$response = $client->publish($request);
 
-if($response == 1){
-	$event = date("Y-m-d") . "  " . date("h:i:sa") . " --- Frontend --- " . "Success: login successful using Username = " . $_POST["uname"] . " and Password = " . $_POST["psw"] . "\n";
-	log_event($event);
-	$_SESSION["username"] = $_POST["uname"];
-	header("Location: success.html");
-	die();
-} else {
+
+if($response == 0){
 	$error = date("Y-m-d") . "  " . date("h:i:sa") . "  --- Frontend --- " . "Error: failed to login using Username = " . $_POST["uname"] . " and Password = " . $_POST["psw"] . "\n";
 	log_event($error);
 	session_unset();
-	session_destroy();
-	header("Location: failed.html");
-	die();
-}
 	
+} else {
+	$event = date("Y-m-d") . "  " . date("h:i:sa") . " --- Frontend --- " . "Success: login successful using Username = " . $_POST["uname"] . " and Password = " . $_POST["psw"] . "\n";
+	log_event($event);
+	$_SESSION["username"] = $_POST["uname"];
+	$_SESSION["platform"] = $response["platform"];
+	$_SESSION["gamertag"] = $response["gamertag"];
+}
+
+session_destroy();
+header("Location: index.php");
+die();		
 }
 
 ?>
