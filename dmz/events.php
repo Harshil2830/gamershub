@@ -40,7 +40,7 @@ if (document.getElementById('session_usr').innerHTML != ""){
 </script>
 
 <?php
-
+	
 ?>
 
 <div id="id01" class="modal">
