@@ -24,13 +24,13 @@ if($data === FALSE){
 		$result = json_decode($data);
 		
 		$kd = floatval($result->data->segments["0"]->stats->kd->value);
-		$k = strval(round($kd, 2));
+		$k = round($kd, 2);
 		
 		$stats = array();
 		
 		$stats["kills"] = $result->data->segments["0"]->stats->kills->value;
 		$stats["deaths"] = $result->data->segments["0"]->stats->deaths->value;
-		$stats["k/d"] = $k;
+		$stats["kd"] = $k;
 		$stats["headshots"] = $result->data->segments["0"]->stats->headshots->value;
 		$stats["wins"] = $result->data->segments["0"]->stats->wins->value;
 		
@@ -67,7 +67,6 @@ if($data === FALSE){
 		$stats["finishers"] = $result->data->segments["0"]->stats->finishers->value;
 		$stats["headshots"] = $result->data->segments["0"]->stats->headshots->value;
 		$stats["damage"] = $result->data->segments["0"]->stats->damage->value;
-		
 
 		return $stats;
 		}
@@ -94,13 +93,13 @@ if($data === FALSE){
 		$result = json_decode($data);
 
 		$kd = floatval($result->data->segments["0"]->stats->kd->value);
-		$k = strval(round($kd, 2));
+		$k = round($kd, 2);
 		
 		$stats = array();
 		
 		$stats["kills"] = $result->data->segments["0"]->stats->kills->value;
 		$stats["deaths"] = $result->data->segments["0"]->stats->deaths->value;
-		$stats["k/d"] = $k;
+		$stats["kd"] = $k;
 		$stats["wins"] = $result->data->segments["0"]->stats->wins->value;
 		$stats["losses"] = $result->data->segments["0"]->stats->losses->value;
 		
