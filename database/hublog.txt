@@ -658,3 +658,9 @@ Stack trace:
 2021-11-07  12:36:46am --- Rabbitmq --- Server received request but request type does not match
 2021-11-07  12:36:47am --- DMZ --- Server received request but request type does not match
 2021-11-07  12:43:57am --- DataBase --- no users matched username
+2021-11-08  12:17:41am --- Frontend --- Success: Registration successful using Username = test5 and Password = test5
+2021-11-08  12:17:42am --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-08  12:17:42am --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-08  12:17:42am --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-08  12:17:42am --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-08  12:39:42am --- Frontend --- Success: Registration successful using Username = 12 and Password = 12

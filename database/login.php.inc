@@ -32,7 +32,36 @@ public function validateLogin($username,$password)
 		if ($row["password"] == $pw)
 		{
 			echo "passwords match for $username".PHP_EOL;
-			return 1;// password match
+			$gamer = array();
+			
+			$statement = "select * from csgo where username = '$un'";
+			$csgoresponse = $this->logindb->query($statement);
+			if($csgoresponse->num_rows > 0){
+				while ($row = $csgoresponse->fetch_assoc()){
+					$gamer["csgoplatform"] = $row["platform"];
+					$gamer["csgogamertag"] = $row["gamertag"];
+				}
+			} 
+			
+			$statement = "select * from apex where username = '$un'";
+			$apexresponse = $this->logindb->query($statement);
+			if($apexresponse->num_rows > 0){
+				while ($row = $apexresponse->fetch_assoc()){
+					$gamer["apexplatform"] = $row["platform"];
+					$gamer["apexgamertag"] = $row["gamertag"];
+				}
+			}
+			
+			$statement = "select * from splitgate where username = '$un'";
+			$splitgateresponse = $this->logindb->query($statement);
+			if($splitgateresponse->num_rows > 0){
+				while ($row = $splitgateresponse->fetch_assoc()){
+					$gamer["splitgateplatform"] = $row["platform"];
+					$gamer["splitgategamertag"] = $row["gamertag"];
+				}
+			}
+			
+			return $gamer;// password match
 		}
 		$event = date("Y-m-d") . "  " . date("h:i:sa") . " --- DataBase --- " . "passwords did not match for $username" . "\n";
 		log_event($event);

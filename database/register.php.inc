@@ -34,5 +34,6 @@ public function validateregister($username,$password,$email)
 
 	return 0;
 }
+
 }
 ?>
