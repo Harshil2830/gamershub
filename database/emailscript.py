@@ -1,15 +1,43 @@
-import smptlib
+import smtplib
+from email.message import EmailMessage
 
-content = 'example';
+def email_alert(subject, body, to):
+    msg = EmailMessage()
+    msg.set_content(body)
+    msg['subject'] = subject
+    msg['to'] = to
 
-mail = smtplib.SMTP('smtp.gmail.com',587);
+    user = "gamershubtest@gmail.com"
+    msg['from'] = user
+    password = "rzxdnjillyjvcuar"
 
-mail.ehlo();
+    server = smtplib.SMTP("smtp.gmail.com",587)
+    server.starttls()
+    server.login(user,password)
+    server.send_message(msg)
+    server.quit()
 
-mail.starttls();
+#if __name__ == '__main__':
+#   email_alert("Gamers Hub Notification","Welcome to gamers hub!","akhan1337@hotmail.com")
+#content = 'example'
 
-mail.login('colorslash@gmail.com','@Pples33!');
+def email_signup(username, email):
+    msg = EmailMessage()
+    body = "Welcome "+username+","+"\n\nYour account was succesfully created!"
+    msg.set_content(body)
+    msg['subject'] = "Welcome to the Game Cave!"
+    msg['to'] = email
 
-mail.sendmail('fromemail','',content);
+    user = "gamershubtest@gmail.com"
+    msg['from'] = user
+    password = "rzxdnjillyjvcuar"
 
-mail.close()
+    server = smtplib.SMTP("smtp.gmail.com",587)
+    server.starttls()
+    server.login(user,password)
+    server.send_message(msg)
+    server.quit()
+
+if __name__ == '__main__':
+    import sys
+    email_signup(sys.argv[1], sys.argv[2])
