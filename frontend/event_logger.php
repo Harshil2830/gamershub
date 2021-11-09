@@ -1,8 +1,8 @@
 <?php	
     	//Error logging
-    	error_reporting(E_ALL);    
-    	ini_set('display_errors', 'On');
-    	ini_set('log_errors', 'On');
+    	//error_reporting(E_ALL);    
+    	//ini_set('display_errors', 'On');
+    	//ini_set('log_errors', 'On');
     	
     function log_event($event_string){
     	//append error to log file
@@ -15,7 +15,7 @@
     	
     	
     	//send error to database server
-    	$db = new rabbitMQClient("testRabbitMQ.ini","testServer");
+    	$db = new rabbitMQClient("database.ini","testServer");
     	$response = $db->publish($request);
     	
     	//send error to dmz server

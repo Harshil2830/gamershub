@@ -15,11 +15,12 @@ session_start();
   <a href="index.php">CSGO</a>
   <a href="game2.php" class="active">Apex Legends</a>
   <a href="game3.php">Splitgate</a>
-  <a href="events.php">Events</a>
+  <a id="events" href="events.php" style="display:none;">Events</a>
+  <a id="forums" href="forums.php" style="display:none;">Forums</a>
   <a id="login" style="display:block;" onclick="document.getElementById('id01').style.display='block'">Login</a>
   <a id="register" style="display:block;" onclick="document.getElementById('id02').style.display='block'">Register</a>
   <a id="profile" href="profile.php" style="display:none;">Profile</a>
-  <a href="forums.php">Forums</a>
+  <a id="logout" href="logout.php" style="display:none;">Logout</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
@@ -35,12 +36,15 @@ if (document.getElementById('session_usr').innerHTML != ""){
 	document.getElementById('register').style.display='none';
 	document.getElementById('notSigned').style.display='none';
 	document.getElementById('profile').style.display='block';
+	document.getElementById('logout').style.display='block';
+	document.getElementById('events').style.display='block';
+	document.getElementById('forums').style.display='block';
 }
 </script>
 
 <?php
 	if(isset($_SESSION["username"])){
-		if(isset($_SESSION["gamertag"]) || isset($_SESSION["platform"])){
+		if(isset($_SESSION["apexgamertag"]) && isset($_SESSION["apexplatform"])){
 			require_once('path.inc');
 			require_once('get_host_info.inc');
 			require_once('rabbitMQLib.inc');
@@ -49,12 +53,16 @@ if (document.getElementById('session_usr').innerHTML != ""){
 
 			$request = array();
 			$request['type'] = "apex";
-			$request['platform'] = $_SESSION["platform"];
-			$request['gamertag'] = $_SESSION["gamertag"];
+			$request['platform'] = $_SESSION["apexplatform"];
+			$request['gamertag'] = $_SESSION["apexgamertag"];
 			$response = $client->send_request($request);
 		
 			if(isset($response["kills"])) {
-				//display the data
+				echo "<h2>Level: " . $response['level'] . "</h2>";
+				echo "<h2>Kills: " . $response['kills'] . "</h2>";
+				echo "<h2>Finishers: " . $response['finishers'] . "</h2>";
+				echo "<h2>Headshots: " . $response['headshots'] . "</h2>";
+				echo "<h2>Damage: " . $response['damage'] . "</h2>";
 			} else {
 				echo "<h2>" . $response . "</h2>";
 			}
@@ -149,6 +157,3 @@ function myFunction() {
 
 </body>
 </html>
-<?php
-session_destroy();
-?>

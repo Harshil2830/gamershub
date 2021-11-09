@@ -11,12 +11,13 @@ session_start();
 </head>
 <body>
 <span id="session_usr" style="display:none;"><?php if(isset($_SESSION["username"])) {echo $_SESSION["username"];} ?></span>
+<!--<span id="session_usr"><?php if(isset($_SESSION["username"])) {echo $_SESSION["csgogamertag"];} ?></span>-->
 <div class="topnav" id="myTopnav">
   <a href="index.php">CSGO</a>
   <a href="game2.php">Apex Legends</a>
-  <a href="game3.php" class="active">Splitgate</a>
+  <a href="game3.php">Splitgate</a>
   <a id="events" href="events.php" style="display:none;">Events</a>
-  <a id="forums" href="forums.php" style="display:none;">Forums</a>
+  <a id="forums" href="forums.php" style="display:none;" class="active">Forums</a>
   <a id="login" style="display:block;" onclick="document.getElementById('id01').style.display='block'">Login</a>
   <a id="register" style="display:block;" onclick="document.getElementById('id02').style.display='block'">Register</a>
   <a id="profile" href="profile.php" style="display:none;">Profile</a>
@@ -26,7 +27,7 @@ session_start();
   </a>
 </div>
 
-<h1> Splitgate </h1>
+<h1> Forums </h1>
 
 <h2 id="notSigned" style="display:block;">Sign in or register an account to see your game stats.</h2>
 
@@ -42,49 +43,43 @@ if (document.getElementById('session_usr').innerHTML != ""){
 }
 </script>
 
-<?php
-	if(isset($_SESSION["username"])){
-		if(isset($_SESSION["splitgategamertag"]) && isset($_SESSION["splitgateplatform"])){
-			require_once('path.inc');
-			require_once('get_host_info.inc');
-			require_once('rabbitMQLib.inc');
 
-			$client = new rabbitMQClient("database.ini","testServer");
-
-			$request = array();
-			$request['type'] = "splitgate";
-			$request['platform'] = $_SESSION["splitgateplatform"];
-			$request['gamertag'] = $_SESSION["splitgategamertag"];
-			$response = $client->send_request($request);
+<div id="wrapper">
+	<div id="content">
+	<table>
+	<tr>
+		<td class="leftp">
+			<h3><a href="category.php">Category Name</a></h3>
+			Category description goes here
 			
-			if(isset($response["kills"])) {
-				echo "<h2>Kills: " . $response['kills'] . "</h2>";
-				echo "<h2>Deaths: " . $response['deaths'] . "</h2>";
-				echo "<h2>K/D: " . $response['kd'] . "</h2>";
-				echo "<h2>Wins: " . $response['wins'] . "</h2>";
-				echo "<h2>Losses: " . $response['losses'] . "</h2>";
-			} else {
-				echo "<h2>" . $response . "</h2>";
-			}
-		} else {
-			echo " <form class='modal-content animate' action='splitgate.php' method='POST'>
-    					<div class='container'>
-      					  <label for='platform'><b>Platform you play splitgate on:</b></label>
-      					  <select name='platform' id='platform' required>
-  						<option value='steam'>Steam</option>
-  						<option value='xbl'>X-Box</option>
-  						<option value='psn'>Playstation</option>
-					  </select>
-
-      					  <label for='gamertag'><b>Gamer ID:</b></label>
-      					  <input type='text' placeholder='Enter Gamer ID' name='gamertag' required>
-        
-      					  <button type='submit' style='font-size:15px;'>Submit</button>
-    					</div>
-  				</form>";
+		</td>
+		<td class="rightp">
+			<a href="topic.php">Topic Subject</a> at 10-10
+		</td>
+	</tr>
+	</table>
+<?php
+	echo '<table border="1">
+			  <tr>
+				<th>Category</th>
+				<th>Last topic</th>
+			  </tr>';	
+			
+		while($row = mysql_fetch_assoc($result))
+		{				
+			echo '<tr>';
+				echo '<td class="leftpart">';
+					echo '<h3><a href="category.php?id">' . $row['cat_name'] . '</a></h3>' . $row['cat_description'];
+				echo '</td>';
+				echo '<td class="rightpart">';
+							echo '<a href="topic.php?id=">Topic subject</a> at 10-10';
+				echo '</td>';
+			echo '</tr>';
 		}
-	}
 ?>
+	</div><!-- content -->
+</div><!-- wrapper -->
+
 
 <div id="id01" class="modal">
   
@@ -154,5 +149,6 @@ function myFunction() {
   }
 }
 </script>
+
 </body>
 </html>

@@ -1,7 +1,6 @@
 <?php
 
 require_once('get_host_info.inc');
-require_once('event_logger.php');
 
 
 class rabbitMQServer
@@ -87,7 +86,7 @@ class rabbitMQServer
 			$error = date("Y-m-d") . "  " . date("h:i:sa") . " --- Frontend --- " . "error: rabbitMQServer: process_message: exception caught: " . $e ."\n";
 			log_event($error);
 			// ampq throws exception if get fails...
-			echo "error: rabbitMQServer: process_message: exception caught: ".$e;
+			//echo "error: rabbitMQServer: process_message: exception caught: ".$e;
 		}
 		// message does not require a response, send ack immediately
 		$body = $msg->getBody();
@@ -96,7 +95,7 @@ class rabbitMQServer
 		{
 			call_user_func($this->callback,$payload);
 		}
-		echo "processed one-way message\n";
+		//echo "processed one-way message\n";
 	}
 
 	function process_requests($callback)
@@ -179,7 +178,7 @@ class rabbitMQClient
 		$uid = $response->getCorrelationId();
 		if (!isset($this->response_queue[$uid]))
 		{
-			echo  "unknown uid\n";
+			//echo  "unknown uid\n";
 			return true;
 		}
 		$this->conn_queue->ack($response->getDeliveryTag());
