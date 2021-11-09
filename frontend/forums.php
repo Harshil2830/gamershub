@@ -46,18 +46,6 @@ if (document.getElementById('session_usr').innerHTML != ""){
 
 <div id="wrapper">
 	<div id="content">
-	<table>
-	<tr>
-		<td class="leftp">
-			<h3><a href="category.php">Category Name</a></h3>
-			Category description goes here
-			
-		</td>
-		<td class="rightp">
-			<a href="topic.php">Topic Subject</a> at 10-10
-		</td>
-	</tr>
-	</table>
 <?php
 	echo '<table border="1">
 			  <tr>

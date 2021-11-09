@@ -21,11 +21,11 @@ $response = $client->send_request($request);
 
 if($response == 0){
 	$error = date("Y-m-d") . "  " . date("h:i:sa") . "  --- Frontend --- " . "Error: failed to login using Username = " . $_POST["uname"] . " and Password = " . $_POST["psw"] . "\n";
-	//log_event($error);
+	log_event($error);
 	
 } else {
 	$event = date("Y-m-d") . "  " . date("h:i:sa") . " --- Frontend --- " . "Success: login successful using Username = " . $_POST["uname"] . " and Password = " . $_POST["psw"] . "\n";
-	//log_event($event);
+	log_event($event);
 	$_SESSION["username"] = $_POST["uname"];
 	$_SESSION["user_id"] = $response["user_id"];
 	if(isset($response["csgogamertag"])){
@@ -48,7 +48,7 @@ if($response == 0){
 	}
 }
 
-header("Location: http://www.gamehub.com/index.php");
+header("Location: http://www.gamehub.com/game2.php");
 exit();		
 }
 

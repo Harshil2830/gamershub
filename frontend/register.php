@@ -21,12 +21,15 @@ $response = $client->send_request($request);
 
 if($response == 1){
 	$event = date("Y-m-d") . "  " . date("h:i:sa") . " --- Frontend --- " . "Success: Registration successful using Username = " . $_POST["uname"] . " and Password = " . $_POST["psw"] . "\n";
-	//log_event($event);
+	log_event($event);
+	$usr = $_POST['uname'];
+	$email = $_POST['email'];
+	$output = shell_exec("python3 emailscript.py $usr $email");
 	header("Location: http://www.gamehub.com/success.php");
 	exit();
 } else {
 	$error = date("Y-m-d") . "  " . date("h:i:sa") . " --- Frontend --- " . "Error: failed to register using Username = " . $_POST["uname"] . " and Password = " . $_POST["psw"] . "\n";
-	//log_event($error);
+	log_event($error);
 	//session_destroy();
 	header("Location: http://www.gamehub.com/failed.php");
 	exit();

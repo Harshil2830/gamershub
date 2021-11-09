@@ -10,7 +10,7 @@ session_start();
 
 </head>
 <body>
-<span id="session_usr" style="display:none;"><?php if(isset($_SESSION["username"])) {echo $_SESSION["username"];} ?></span>
+<span id="session_usr" ><?php if(isset($_SESSION["username"])) {echo $_SESSION["username"];} ?></span>
 <!--<span id="session_usr"><?php if(isset($_SESSION["username"])) {echo $_SESSION["csgogamertag"];} ?></span>-->
 <div class="topnav" id="myTopnav">
   <a href="index.php" class="active">CSGO</a>

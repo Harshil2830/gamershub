@@ -10,7 +10,7 @@ session_start();
 
 </head>
 <body>
-<span id="session_usr" style="display:none;"><?php if(isset($_SESSION["username"])) {echo $_SESSION["username"];} ?></span>
+<span id="session_usr" style=""><?php if(isset($_SESSION["username"])) {echo $_SESSION["username"];} ?></span>
 <div class="topnav" id="myTopnav">
   <a href="index.php">CSGO</a>
   <a href="game2.php">Apex Legends</a>

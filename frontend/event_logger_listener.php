@@ -24,6 +24,7 @@ function requestProcessor($request)
   {
     case "event_log":
       doLog($request['error_message']);
+      break;
     /*default:
       $event = date("Y-m-d") . "  " . date("h:i:sa") . " --- Frontend --- " . "Server received request but request type does not match" . "\n";
       log_event($event);*/
