@@ -11,15 +11,17 @@ session_start();
 </head>
 <body>
 <span id="session_usr" style="display:none;"><?php if(isset($_SESSION["username"])) {echo $_SESSION["username"];} ?></span>
+<!--<span id="session_usr"><?php if(isset($_SESSION["username"])) {echo $_SESSION["csgogamertag"];} ?></span>-->
 <div class="topnav" id="myTopnav">
   <a href="index.php" class="active">CSGO</a>
   <a href="game2.php">Apex Legends</a>
   <a href="game3.php">Splitgate</a>
-  <a href="events.php">Events</a>
+  <a id="events" href="events.php" style="display:none;">Events</a>
+  <a id="forums" href="forums.php" style="display:none;">Forums</a>
   <a id="login" style="display:block;" onclick="document.getElementById('id01').style.display='block'">Login</a>
   <a id="register" style="display:block;" onclick="document.getElementById('id02').style.display='block'">Register</a>
   <a id="profile" href="profile.php" style="display:none;">Profile</a>
-  <a href="forums.php">Forums</a>
+  <a id="logout" href="logout.php" style="display:none;">Logout</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
@@ -35,12 +37,15 @@ if (document.getElementById('session_usr').innerHTML != ""){
 	document.getElementById('register').style.display='none';
 	document.getElementById('notSigned').style.display='none';
 	document.getElementById('profile').style.display='block';
+	document.getElementById('logout').style.display='block';
+	document.getElementById('events').style.display='block';
+	document.getElementById('forums').style.display='block';
 }
 </script>
 
 <?php
 	if(isset($_SESSION["username"])){
-		if(isset($_SESSION["gamertag"]) || isset($_SESSION["platform"])){
+		if(isset($_SESSION["csgogamertag"]) && isset($_SESSION["csgoplatform"])){
 			require_once('path.inc');
 			require_once('get_host_info.inc');
 			require_once('rabbitMQLib.inc');
@@ -49,23 +54,27 @@ if (document.getElementById('session_usr').innerHTML != ""){
 
 			$request = array();
 			$request['type'] = "csgo";
-			$request['platform'] = $_SESSION["platform"];
-			$request['gamertag'] = $_SESSION["gamertag"];
+			$request['platform'] = $_SESSION["csgoplatform"];
+			$request['gamertag'] = $_SESSION["csgogamertag"];
 			$response = $client->send_request($request);
 		 
 			if(isset($response["kills"])) {
-				//display the data
+				echo "<h2>Kills: " . $response['kills'] . "</h2>";
+				echo "<h2>Deaths: " . $response['deaths'] . "</h2>";
+				echo "<h2>K/D: " . $response['kd'] . "</h2>";
+				echo "<h2>Headshots: " . $response['headshots'] . "</h2>";
+				echo "<h2>Wins: " . $response['wins'] . "</h2>";
 			} else {
 				echo "<h2>" . $response . "</h2>";
 			}
 		} else {
 			echo " <form class='modal-content animate' action='csgo.php' method='POST'>
     					<div class='container'>
-      					  <label for='platform'><b>Platform you play CSGO on:</b></label>
-      					  <select name='platform' id='platform' required>
+      					  <label for='platform'><b>Platform you play CSGO on:</b></label><br>
+      					  <select style='margin: 5px 0px;' name='platform' id='platform' required>
   						<option value='steam'>Steam</option>
 					  </select>
-
+					<br>
       					  <label for='gamertag'><b>Gamer ID:</b></label>
       					  <input type='text' placeholder='Enter Gamer ID' name='gamertag' required>
         
@@ -147,6 +156,3 @@ function myFunction() {
 
 </body>
 </html>
-<?php
-session_destroy();
-?>

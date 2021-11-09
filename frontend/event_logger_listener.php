@@ -1,9 +1,10 @@
 #!/usr/bin/php
 <?php
+require_once('event_logger.php');
 require_once('path.inc');
 require_once('get_host_info.inc');
 require_once('rabbitMQLib.inc');
-require_once('event_logger.php');
+
 
 function doLog($error){
 	file_put_contents("/var/www/gamehub/log.txt", $error, FILE_APPEND);
@@ -16,7 +17,7 @@ function requestProcessor($request)
   if(!isset($request['type']))
   {
     $event = date("Y-m-d") . "  " . date("h:i:sa") . " --- Frontend --- " . "ERROR: unsupported message type" . "\n";
-    log_event($event);
+    //log_event($event);
     return "ERROR: unsupported message type";
   }
   switch ($request['type'])

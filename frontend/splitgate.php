@@ -8,6 +8,7 @@ require_once('get_host_info.inc');
 require_once('rabbitMQLib.inc');
 require_once('event_logger.php');
 
+
 $client = new rabbitMQClient("database.ini","testServer");
 
 
@@ -21,15 +22,15 @@ $response = $client->send_request($request);
 
 if($response == 1){
 	$event = date("Y-m-d") . "  " . date("h:i:sa") . " --- Frontend --- " . "Success: Splitgate gamertag added Username = " . $_SESSION["username"] . ", Platform = " . $_POST["platform"] . ", Gamer Tag = " . $_POST["gamertag"] . "\n";
-	log_event($event);
+	//log_event($event);
+	$_SESSION["splitgateplatform"] = $_POST["platform"];
+	$_SESSION["splitgategamertag"] = $_POST["gamertag"];
 } else {
 	$error = date("Y-m-d") . "  " . date("h:i:sa") . "  --- Frontend --- " . "Error: Splitgate failed to add to account using Username = " . $_SESSION["username"] . ", Platform = " . $_POST["platform"] . ", Gamer Tag = " . $_POST["gamertag"] . "\n";
-	log_event($error);
+	//log_event($error);
 }
 
-session_destroy();
-header("Location: game3.php");
+header("Location: http://www.gamehub.com/game3.php");
 die();		
 }
-
 ?>
