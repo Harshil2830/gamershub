@@ -1,5 +1,5 @@
 <?php
-require_once('event_logger.php');
+//require_once('event_logger.php');
 
 class dataDB
 {
@@ -37,6 +37,7 @@ public function validatecsgo($platform,$gamertag)
     	if(!isset($data["kills"])){
     		return $data;
     	}
+    	print_r($data);
     	$kills = $data["kills"];
     	$deaths = $data["deaths"];
     	$kd = $data["kd"];
@@ -48,7 +49,7 @@ public function validatecsgo($platform,$gamertag)
 	$response = $this->datadb->query($statement);
 	if($response->num_rows > 0){
 		$statement = "UPDATE csgo SET kills='$kills', deaths='$deaths', kd='$kd', headshots='$headshots', wins='$wins' WHERE gamertag = '$gt'";
-		$response = $this->registerdb->query($statement);
+		$response = $this->datadb->query($statement);
 		if($response == TRUE)
 		{
 			return $data;
@@ -57,7 +58,7 @@ public function validatecsgo($platform,$gamertag)
 	else {
 		$statement = "INSERT INTO csgo(gamertag,kills,deaths,kd,headshots,wins)
 	VALUES('$gt','$kills','$deaths','$kd','$headshots','$wins')";
-		$response = $this->registerdb->query($statement);
+		$response = $this->datadb->query($statement);
 		if($response == TRUE)
 		{
 			return $data;
@@ -66,7 +67,7 @@ public function validatecsgo($platform,$gamertag)
 
 	
 	$event = date("Y-m-d") . "  " . date("h:i:sa") . " --- DataBase --- " . "error: could not get data from csgo" . "\n";
-	log_event($event);
+	//log_event($event);
 	echo "error: could not get data from csgo".PHP_EOL;
 	return 0;//error: could not get data from csgo
 }
@@ -89,8 +90,9 @@ public function validateapex($platform,$gamertag)
     	if(!isset($data["kills"])){
     		return $data;
     	}
-    	$kills = $data["kills"];
+    	print_r($data);
     	$level = $data["level"];
+    	$kills = $data["kills"];
     	$finishers = $data["finishers"];
     	$headshots = $data["headshots"];
     	$damage = $data["damage"];
@@ -99,7 +101,7 @@ public function validateapex($platform,$gamertag)
 	$response = $this->datadb->query($statement);
 	if($response->num_rows > 0){
 		$statement = "UPDATE apex SET level='$level',kills='$kills',finishers='$finishers',headshots='$headshots',damage='$damage' WHERE gamertag = '$gt'";
-		$response = $this->registerdb->query($statement);
+		$response = $this->datadb->query($statement);
 		if($response == TRUE)
 		{
 			return $data;
@@ -108,7 +110,7 @@ public function validateapex($platform,$gamertag)
 	else {
 		$statement = "INSERT INTO apex(gamertag,level,kills,finishers,headshots,damage)
 	VALUES('$gt','$level','$kills','$finishers','$headshots','$damage')";
-		$response = $this->registerdb->query($statement);
+		$response = $this->datadb->query($statement);
 		if($response == TRUE)
 		{
 			return $data;
@@ -139,6 +141,7 @@ public function validatesplitgate($platform,$gamertag)
     	if(!isset($data["kills"])){
     		return $data;
     	}
+    	print_r($data);
     	$kills = $data["kills"];
     	$deaths = $data["deaths"];
     	$kd = $data["kd"];
@@ -149,7 +152,7 @@ public function validatesplitgate($platform,$gamertag)
 	$response = $this->datadb->query($statement);
 	if($response->num_rows > 0){
 		$statement = "UPDATE splitgate SET kills='$kills', deaths='$deaths',kd='$kd',wins='$wins',losses='$losses' WHERE gamertag = '$gt'";
-		$response = $this->registerdb->query($statement);
+		$response = $this->datadb->query($statement);
 		if($response == TRUE)
 		{
 			return $data;
@@ -158,7 +161,7 @@ public function validatesplitgate($platform,$gamertag)
 	else {
 		$statement = "INSERT INTO splitgate(gamertag,kills,deaths,kd,wins,losses)
 	VALUES('$gt','$kills','$deaths','$kd','$wins','$losses')";
-		$response = $this->registerdb->query($statement);
+		$response = $this->datadb->query($statement);
 		if($response == TRUE)
 		{
 			return $data;

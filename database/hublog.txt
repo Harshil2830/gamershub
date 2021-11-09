@@ -664,3 +664,13 @@ Stack trace:
 2021-11-08  12:17:42am --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
 2021-11-08  12:17:42am --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
 2021-11-08  12:39:42am --- Frontend --- Success: Registration successful using Username = 12 and Password = 12
+2021-11-08  02:39:34pm --- Frontend --- Success: Registration successful using Username = Register6 and Password = Register6
+2021-11-08  02:46:58pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-08  02:56:55pm --- Frontend --- Success: login successful using Username = register1 and Password = register1
+2021-11-08  03:13:24pm --- Frontend --- Success: login successful using Username = register3 and Password = register
+2021-11-08  03:46:27pm --- Frontend --- Success: CSGO gamertag added Username = test8, Platform = steam, Gamer Tag = 76561198069180684
+2021-11-08  03:49:42pm --- Frontend --- Success: login successful using Username = test8 and Password = test8
+2021-11-08  04:02:22pm --- Frontend --- Success: CSGO gamertag added Username = test9, Platform = steam, Gamer Tag = 76561198069180684
+2021-11-08  04:04:43pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  12:25:16am --- Frontend --- Success: login successful using Username = test3 and Password = test3
+2021-11-09  12:36:07am --- Frontend --- Success: login successful using Username = test3 and Password = test3

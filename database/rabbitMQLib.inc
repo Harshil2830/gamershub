@@ -1,7 +1,7 @@
 <?php
 
 require_once('get_host_info.inc');
-require_once('event_logger.php');
+//require_once('event_logger.php');
 
 class rabbitMQServer
 {

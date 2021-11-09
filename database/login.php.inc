@@ -1,5 +1,5 @@
 <?php
-require_once('event_logger.php');
+//require_once('event_logger.php');
 
 class loginDB
 {
@@ -12,7 +12,7 @@ public function __construct()
 	if ($this->logindb->connect_errno != 0)
 	{
 		$event = date("Y-m-d") . "  " . date("h:i:sa") . " --- DataBase --- " . "Error connecting to database: ".$this->logindb->connect_error.PHP_EOL . "\n";
-    		log_event($event);
+    		//log_event($event);
 		echo "Error connecting to database: ".$this->logindb->connect_error.PHP_EOL;
 		exit(1);
 	}
@@ -23,7 +23,7 @@ public function validateLogin($username,$password)
 {
 	$un = $this->logindb->real_escape_string($username);
 	$pw = $this->logindb->real_escape_string($password);
-	$statement = "select * from users where username = '$un'";
+	$statement = "select * from users where username='$un'";
 	$response = $this->logindb->query($statement);
 	if($response->num_rows > 0){
 	while ($row = $response->fetch_assoc())
@@ -34,7 +34,7 @@ public function validateLogin($username,$password)
 			echo "passwords match for $username".PHP_EOL;
 			$gamer = array();
 			
-			$statement = "select * from csgo where username = '$un'";
+			$statement = "select * from csgo where username='$un'";
 			$csgoresponse = $this->logindb->query($statement);
 			if($csgoresponse->num_rows > 0){
 				while ($row = $csgoresponse->fetch_assoc()){
@@ -43,7 +43,7 @@ public function validateLogin($username,$password)
 				}
 			} 
 			
-			$statement = "select * from apex where username = '$un'";
+			$statement = "select * from apex where username='$un'";
 			$apexresponse = $this->logindb->query($statement);
 			if($apexresponse->num_rows > 0){
 				while ($row = $apexresponse->fetch_assoc()){
@@ -52,7 +52,7 @@ public function validateLogin($username,$password)
 				}
 			}
 			
-			$statement = "select * from splitgate where username = '$un'";
+			$statement = "select * from splitgate where username='$un'";
 			$splitgateresponse = $this->logindb->query($statement);
 			if($splitgateresponse->num_rows > 0){
 				while ($row = $splitgateresponse->fetch_assoc()){
@@ -64,12 +64,12 @@ public function validateLogin($username,$password)
 			return $gamer;// password match
 		}
 		$event = date("Y-m-d") . "  " . date("h:i:sa") . " --- DataBase --- " . "passwords did not match for $username" . "\n";
-		log_event($event);
+		//log_event($event);
 		echo "passwords did not match for $username".PHP_EOL;
 	}}
 	
 	$event = date("Y-m-d") . "  " . date("h:i:sa") . " --- DataBase --- " . "no users matched username" . "\n";
-	log_event($event);
+	//log_event($event);
 	echo "no users matched username".PHP_EOL;
 	return 0;//no users matched username
 }
