@@ -1,12 +1,14 @@
 #!/usr/bin/php
 <?php
 
-require_once('event_logger.php');
+//require_once('event_logger.php');
 
 function getcsgo($platform, $id){
+//echo "in function";
 /*
 $platform = "steam";
-$id = "76561198069180684";
+$id = "76561198069180684
+	76561198069180684";
 */
 $url = "https://public-api.tracker.gg/v2/csgo/standard/profile/".$platform."/".$id."?TRN-Api-Key=09b1df56-5bb1-4d79-8b7e-da2eb3ffcabe";
 
@@ -34,11 +36,13 @@ if($data === FALSE){
 		$stats["headshots"] = $result->data->segments["0"]->stats->headshots->value;
 		$stats["wins"] = $result->data->segments["0"]->stats->wins->value;
 		
+		//echo "stats return";
 		return $stats;
 	}
 }
 
 function getapex($platform, $id){
+echo "function \n";
 /*
 $platform = "origin";
 $id = "FunX10";
@@ -68,10 +72,12 @@ if($data === FALSE){
 		$stats["headshots"] = $result->data->segments["0"]->stats->headshots->value;
 		$stats["damage"] = $result->data->segments["0"]->stats->damage->value;
 
+		print_r($stats);
 		return $stats;
 		}
 }
 function getsplitgate($platform, $id){
+//echo "function \n";
 /*
 $platform = "psn";
 $id = "ZyoEU";
@@ -103,6 +109,7 @@ if($data === FALSE){
 		$stats["wins"] = $result->data->segments["0"]->stats->wins->value;
 		$stats["losses"] = $result->data->segments["0"]->stats->losses->value;
 		
+		//echo "stats return";
 		return $stats;
 		}
 }

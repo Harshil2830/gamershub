@@ -1,10 +1,10 @@
 #!/usr/bin/php
 <?php
+require_once('event_logger.php');
 require_once('path.inc');
 require_once('get_host_info.inc');
 require_once('rabbitMQLib.inc');
 require_once('apidata.php');
-require_once('event_logger.php');
 
 function doLog($error){
 	file_put_contents("log.txt", $error, FILE_APPEND);
@@ -23,11 +23,11 @@ function requestProcessor($request)
   }
   switch ($request['type'])
   {
-    case "csgodata":
+    case "getcsgo":
       return getcsgo($request['platform'],$request['gamertag']);
-    case "apexdata":
+    case "getapex":
       return getapex($request['platform'],$request['gamertag']);
-    case "splitgatedata":
+    case "getsplitgate":
       return getsplitgate($request['platform'],$request['gamertag']);
     case "event_log":
       doLog($request['error_message']);

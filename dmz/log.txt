@@ -203,3 +203,85 @@ dmz log
 2021-11-07  12:36:46am --- Rabbitmq --- Server received request but request type does not match
 2021-11-07  12:41:58am --- DataBase --- no users matched username
 2021-11-07  12:43:57am --- DataBase --- no users matched username
+2021-11-09  12:25:16am --- Frontend --- Success: login successful using Username = test3 and Password = test3
+2021-11-09  12:36:07am --- Frontend --- Success: login successful using Username = test3 and Password = test3
+2021-11-09  12:47:14am --- DataBase --- error: could not get data from csgo
+2021-11-09  12:47:15am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  12:47:15am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  12:47:15am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  12:47:15am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  12:47:15am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  12:47:15am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  12:47:16am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  12:47:16am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  12:47:16am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  12:47:16am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  12:47:16am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  12:47:17am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  12:47:17am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  12:47:17am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  12:47:17am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  12:47:17am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  12:47:18am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  12:47:18am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  12:47:18am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  12:47:18am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  12:47:18am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  12:47:18am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  12:47:19am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  12:47:19am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  12:47:19am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  12:47:19am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  12:47:19am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  12:47:20am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  12:56:04am --- DataBase --- error: could not get data from csgo
+2021-11-09  12:56:04am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  12:56:04am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  12:56:05am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  12:56:05am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  12:56:05am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  12:56:05am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  12:56:05am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:03:07am --- DMZ --- Failed to start request processor: AMQPConnectionException: Socket error: could not connect to host. in /home/khang/git/gamershub/dmz/rabbitMQLib.inc:112
+Stack trace:
+#0 /home/khang/git/gamershub/dmz/rabbitMQLib.inc(112): AMQPConnection->connect()
+#1 /home/khang/git/gamershub/dmz/listener.php(44): rabbitMQServer->process_requests()
+#2 {main}
+2021-11-09  01:03:10am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:03:13am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:03:16am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:03:19am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:03:22am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:03:25am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:03:28am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:03:31am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:03:34am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:03:37am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:03:40am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:03:43am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:03:47am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:03:50am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:03:53am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:03:56am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:03:59am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:04:02am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:04:05am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:04:08am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:04:11am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:04:14am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:04:17am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:04:20am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:04:23am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:04:26am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:04:30am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:04:33am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:04:36am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:04:39am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:04:42am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:04:45am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:04:48am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:04:51am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:04:54am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:04:57am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:05:00am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  01:05:03am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
