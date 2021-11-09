@@ -17,9 +17,9 @@ def email_alert(subject, body, to):
     server.send_message(msg)
     server.quit()
 
-if __name__ == '__main__':
-   email_alert("Gamers Hub Notification","Welcome to gamers hub!","akhan1337@hotmail.com")
-content = 'example'
+#if __name__ == '__main__':
+#   email_alert("Gamers Hub Notification","Welcome to gamers hub!","akhan1337@hotmail.com")
+#content = 'example'
 
 def email_signup(username, email):
     msg = EmailMessage()
@@ -38,4 +38,6 @@ def email_signup(username, email):
     server.send_message(msg)
     server.quit()
 
-email_signup("Akhan1337", "akhan1337@hotmail.com")
+if __name__ == '__main__':
+    import sys
+    email_signup(sys.argv[1], sys.argv[2])
