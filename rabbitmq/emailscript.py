@@ -37,7 +37,7 @@ def email_signup(username, email):
     server.login(user,password)
     server.send_message(msg)
     server.quit()
-
+    return "Success!"
 if __name__ == '__main__':
     import sys
     email_signup(sys.argv[1], sys.argv[2])
