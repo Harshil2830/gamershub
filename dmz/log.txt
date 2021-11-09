@@ -285,3 +285,45 @@ Stack trace:
 2021-11-09  01:04:57am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
 2021-11-09  01:05:00am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
 2021-11-09  01:05:03am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-09  11:59:53am --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
+2021-11-09  11:59:51am --- Frontend --- Success: Registration successful using Username = Harshil and Password = Harshil
+2021-11-09  11:59:58am --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
+2021-11-09  12:06:05pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
+2021-11-09  12:06:10pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
+2021-11-09  12:06:21pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
+2021-11-09  12:06:27pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
+2021-11-09  12:09:49pm --- Frontend --- Success: Registration successful using Username = Harshil56 and Password = Harshil56
+2021-11-09  12:09:51pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
+2021-11-09  12:09:56pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
+2021-11-09  12:11:19pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
+2021-11-09  12:11:24pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
+2021-11-09  12:11:53pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
+2021-11-09  12:11:59pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
+2021-11-09  12:15:55pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
+2021-11-09  12:15:53pm --- Frontend --- Error: failed to register using Username = Harshil56 and Password = Harshil56
+2021-11-09  12:16:02pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
+2021-11-09  12:16:29pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
+2021-11-09  12:16:36pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
+2021-11-09  12:19:09pm --- Frontend --- Success: Registration successful using Username = Harshil56 and Password = Harshil56
+2021-11-09  12:19:14pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
+2021-11-09  12:19:21pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
+2021-11-09  12:21:32pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
+2021-11-09  12:21:37pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
+2021-11-09  12:23:30pm --- Frontend --- Success: Registration successful using Username = h56 and Password = h56
+2021-11-09  12:23:33pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
+2021-11-09  12:23:38pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
+2021-11-09  12:28:57pm --- Frontend --- Success: Registration successful using Username = aek28 and Password = aek28
+2021-11-09  12:29:00pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
+2021-11-09  12:29:04pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
+2021-11-09  12:35:39pm --- Frontend --- Success: Registration successful using Username = hss56 and Password = hss56
+2021-11-09  12:35:43pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
+2021-11-09  12:35:51pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
+2021-11-09  12:37:25pm --- Frontend --- Success: Registration successful using Username = hss56 and Password = hss56
+2021-11-09  12:37:27pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
+2021-11-09  12:37:33pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
+2021-11-09  12:51:54pm --- Frontend --- Success: Registration successful using Username = test and Password = test
+2021-11-09  12:51:57pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
+2021-11-09  12:52:02pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
+2021-11-09  12:56:09pm --- Frontend --- Error: failed to register using Username = test3 and Password = test3
+2021-11-09  01:00:15pm --- Frontend --- Success: Registration successful using Username = t20 and Password = t20
+2021-11-09  01:00:45pm --- Frontend --- Success: login successful using Username = test3 and Password = test3

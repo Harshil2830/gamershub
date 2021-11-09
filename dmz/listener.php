@@ -31,6 +31,7 @@ function requestProcessor($request)
       return getsplitgate($request['platform'],$request['gamertag']);
     case "event_log":
       doLog($request['error_message']);
+      break;
     /*default:
       $event = date("Y-m-d") . "  " . date("h:i:sa") . " --- DMZ --- " . "Server received request but request type does not match" . "\n";
       log_event($event);*/

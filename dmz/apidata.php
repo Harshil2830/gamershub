@@ -7,8 +7,7 @@ function getcsgo($platform, $id){
 //echo "in function";
 /*
 $platform = "steam";
-$id = "76561198069180684
-	76561198069180684";
+$id = "76561198069180684";
 */
 $url = "https://public-api.tracker.gg/v2/csgo/standard/profile/".$platform."/".$id."?TRN-Api-Key=09b1df56-5bb1-4d79-8b7e-da2eb3ffcabe";
 
@@ -42,7 +41,7 @@ if($data === FALSE){
 }
 
 function getapex($platform, $id){
-echo "function \n";
+//echo "function \n";
 /*
 $platform = "origin";
 $id = "FunX10";
@@ -72,7 +71,7 @@ if($data === FALSE){
 		$stats["headshots"] = $result->data->segments["0"]->stats->headshots->value;
 		$stats["damage"] = $result->data->segments["0"]->stats->damage->value;
 
-		print_r($stats);
+		//print_r($stats);
 		return $stats;
 		}
 }
