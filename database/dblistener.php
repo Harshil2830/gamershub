@@ -77,6 +77,7 @@ function requestProcessor($request)
       return doRegister($request['username'],$request['password'],$request['email']);
     case "event_log":
       doLog($request['error_message']);
+      break;
     case "csgo":
       return docsgo($request['platform'],$request['gamertag']);
     case "apex":
