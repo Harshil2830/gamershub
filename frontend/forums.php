@@ -11,7 +11,6 @@ session_start();
 </head>
 <body>
 <span id="session_usr" style="display:none;"><?php if(isset($_SESSION["username"])) {echo $_SESSION["username"];} ?></span>
-<!--<span id="session_usr"><?php if(isset($_SESSION["username"])) {echo $_SESSION["csgogamertag"];} ?></span>-->
 <div class="topnav" id="myTopnav">
   <a href="index.php">CSGO</a>
   <a href="game2.php">Apex Legends</a>
@@ -29,7 +28,7 @@ session_start();
 
 <h1> Forums </h1>
 
-<h2 id="notSigned" style="display:block;">Sign in or register an account to see your game stats.</h2>
+<h2 id="notSigned" style="display:block;">Sign in or register an account to see the forums.</h2>
 
 <script>
 if (document.getElementById('session_usr').innerHTML != ""){
@@ -47,24 +46,47 @@ if (document.getElementById('session_usr').innerHTML != ""){
 <div id="wrapper">
 	<div id="content">
 <?php
-	echo '<table border="1">
+if(isset($_SESSION["username"])){
+	//the user is signed in
+	require_once('path.inc');
+	require_once('get_host_info.inc');
+	require_once('rabbitMQLib.inc');
+	require_once('event_logger.php');
+
+	$client = new rabbitMQClient("database.ini","testServer");
+
+	$request = array();
+	$request['type'] = "forums";
+	$request['message'] = "Display the Categories";
+	$response = $client->send_request($request);
+		
+	if($response == 0){
+		echo "<h1> No categories to display. </h1>";
+		$error = date("Y-m-d") . "  " . date("h:i:sa") . "  --- Frontend --- " . "No categories to display." . "\n";
+		log_event($error);
+	
+	} else {
+		echo '<table border="1">
 			  <tr>
 				<th>Category</th>
 				<th>Last topic</th>
 			  </tr>';	
 			
-		while($row = mysql_fetch_assoc($result))
+		while($row = mysql_fetch_assoc($response))
 		{				
 			echo '<tr>';
 				echo '<td class="leftpart">';
 					echo '<h3><a href="category.php?id">' . $row['cat_name'] . '</a></h3>' . $row['cat_description'];
 				echo '</td>';
 				echo '<td class="rightpart">';
-							echo '<a href="topic.php?id=">Topic subject</a> at 10-10';
+					echo '<a href="topic.php?id=">Topic subject</a> at 10-10';
 				echo '</td>';
 			echo '</tr>';
 		}
+	}
+}
 ?>
+
 	</div><!-- content -->
 </div><!-- wrapper -->
 

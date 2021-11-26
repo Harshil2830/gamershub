@@ -129,6 +129,7 @@ class rabbitMQServer
 			{
 				$channel->wait();
 			}
+			
 		}
 		catch (Exception $e)
 		{
@@ -178,7 +179,7 @@ class rabbitMQClient
 		$uid = $response->getCorrelationId();
 		if (!isset($this->response_queue[$uid]))
 		{
-			//echo  "unknown uid\n";
+			echo  "unknown uid\n";
 			return true;
 		}
 		$this->conn_queue->ack($response->getDeliveryTag());
@@ -267,6 +268,7 @@ class rabbitMQClient
 			$this->conn_queue = new AMQPQueue($channel);
 			$this->conn_queue->setName($this->queue);
 			$this->conn_queue->bind($exchange->getName(),$this->routing_key);
+			
 			return $exchange->publish($json_message,$this->routing_key);
 		}
 		catch(Exception $e)
