@@ -12,7 +12,7 @@ session_start();
 <body>
 <span id="session_usr" style="display:none;"><?php if(isset($_SESSION["username"])) {echo $_SESSION["username"];} ?></span>
 <div class="topnav" id="myTopnav">
-  <a href="index.php" class="active">CSGO</a>
+  <a href="index.php">CSGO</a>
   <a href="game2.php">Apex Legends</a>
   <a href="game3.php">Splitgate</a>
   <a id="events" href="events.php" style="display:none;">Events</a>
@@ -26,9 +26,9 @@ session_start();
   </a>
 </div>
 
-<h1> CS:GO </h1>
+<h1> Create a topic </h1>
 
-<h2 id="notSigned" style="display:block;">Sign in or register an account to see your game stats.</h2>
+<h2 id="notSigned" style="display:block;">Sign in or register an account to create a topic.</h2>
 
 <script>
 if (document.getElementById('session_usr').innerHTML != ""){
@@ -42,47 +42,64 @@ if (document.getElementById('session_usr').innerHTML != ""){
 }
 </script>
 
+
+<div id="wrapper">
+	<div id="content">
 <?php
-	if(isset($_SESSION["username"])){
-		if(isset($_SESSION["csgogamertag"]) && isset($_SESSION["csgoplatform"])){
-			require_once('path.inc');
-			require_once('get_host_info.inc');
-			require_once('rabbitMQLib.inc');
 
-			$client = new rabbitMQClient("database.ini","testServer");
-
-			$request = array();
-			$request['type'] = "csgo";
-			$request['platform'] = $_SESSION["csgoplatform"];
-			$request['gamertag'] = $_SESSION["csgogamertag"];
-			$response = $client->send_request($request);
-		 
-			if(isset($response["kills"])) {
-				echo "<h2>Kills: " . $response['kills'] . "</h2>";
-				echo "<h2>Deaths: " . $response['deaths'] . "</h2>";
-				echo "<h2>K/D: " . $response['kd'] . "</h2>";
-				echo "<h2>Headshots: " . $response['headshots'] . "</h2>";
-				echo "<h2>Wins: " . $response['wins'] . "</h2>";
-			} else {
-				echo "<h2>" . $response . "</h2>";
+if(isset($_SESSION["username"])){
+	//the user is signed in
+	if($_SERVER['REQUEST_METHOD'] != 'POST')
+	{	
+		//displaying the form
+		echo '<form method="post" action="">
+			Subject: <input type="text" name="topic_subject">
+			Category:'; 
+		
+		echo '<select name="topic_cat">';
+			while($row = mysql_fetch_assoc($result))
+			{
+				echo '<option value="' . $row['cat_id'] . '">' . $row['cat_name'] . '</option>';
 			}
-		} else {
-			echo " <form class='modal-content animate' action='csgo.php' method='POST'>
-    					<div class='container'>
-      					  <label for='platform'><b>Platform you play CSGO on:</b></label><br>
-      					  <select style='margin: 5px 0px;' name='platform' id='platform' required>
-  						<option value='steam'>Steam</option>
-					  </select>
-					<br>
-      					  <label for='gamertag'><b>Gamer ID:</b></label>
-      					  <input type='text' placeholder='Enter Gamer ID' name='gamertag' required>
-        
-      					  <button type='submit' style='font-size:15px;'>Submit</button>
-    					</div>
-  				</form>";
-		}
+		echo '</select>';	
+			
+		echo 'Message: <textarea name="post_content"></textarea>
+			<input type="submit" value="Create topic">
+		     </form>';
 	}
+	else
+	{
+		require_once('path.inc');
+		require_once('get_host_info.inc');
+		require_once('rabbitMQLib.inc');
+		require_once('event_logger.php');
+
+		$client = new rabbitMQClient("database.ini","testServer");
+
+		$request = array();
+		$request['type'] = "create_topic";
+		$request['topic_subject'] = $_POST["topic_subject"];
+		$request['topic_cat'] = $_POST["topic_cat"];
+		$request['post_content'] = $_POST["post_content"];
+		$response = $client->send_request($request);
+		
+		if($response == 0){
+			echo "<h1> Error: Failed to create new topic. </h1>";
+			$error = date("Y-m-d") . "  " . date("h:i:sa") . "  --- Frontend --- " . "Error: Failed to create topic" . "\n";
+			log_event($error);
+	
+		} else {
+			echo "<h1> Success: New topic created. </h1>";
+			$event = date("Y-m-d") . "  " . date("h:i:sa") . " --- Frontend --- " . "Success: New topic created." . "\n";
+			log_event($event);
+		}
+	}//post
+}//username
 ?>
+
+	</div><!-- content -->
+</div><!-- wrapper -->
+
 
 <div id="id01" class="modal">
   

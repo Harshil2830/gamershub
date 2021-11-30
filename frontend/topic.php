@@ -12,7 +12,7 @@ session_start();
 <body>
 <span id="session_usr" style="display:none;"><?php if(isset($_SESSION["username"])) {echo $_SESSION["username"];} ?></span>
 <div class="topnav" id="myTopnav">
-  <a href="index.php" class="active">CSGO</a>
+  <a href="index.php">CSGO</a>
   <a href="game2.php">Apex Legends</a>
   <a href="game3.php">Splitgate</a>
   <a id="events" href="events.php" style="display:none;">Events</a>
@@ -26,9 +26,7 @@ session_start();
   </a>
 </div>
 
-<h1> CS:GO </h1>
-
-<h2 id="notSigned" style="display:block;">Sign in or register an account to see your game stats.</h2>
+<h2 id="notSigned" style="display:block;">Sign in or register an account to create a topic.</h2>
 
 <script>
 if (document.getElementById('session_usr').innerHTML != ""){
@@ -42,47 +40,79 @@ if (document.getElementById('session_usr').innerHTML != ""){
 }
 </script>
 
+
+<div id="wrapper">
+	<div id="content">
 <?php
-	if(isset($_SESSION["username"])){
-		if(isset($_SESSION["csgogamertag"]) && isset($_SESSION["csgoplatform"])){
-			require_once('path.inc');
-			require_once('get_host_info.inc');
-			require_once('rabbitMQLib.inc');
 
-			$client = new rabbitMQClient("database.ini","testServer");
+if(isset($_SESSION["username"])){
+	//user is signed in
+	//display category data
+	require_once('path.inc');
+	require_once('get_host_info.inc');
+	require_once('rabbitMQLib.inc');
+	require_once('event_logger.php');
 
-			$request = array();
-			$request['type'] = "csgo";
-			$request['platform'] = $_SESSION["csgoplatform"];
-			$request['gamertag'] = $_SESSION["csgogamertag"];
-			$response = $client->send_request($request);
-		 
-			if(isset($response["kills"])) {
-				echo "<h2>Kills: " . $response['kills'] . "</h2>";
-				echo "<h2>Deaths: " . $response['deaths'] . "</h2>";
-				echo "<h2>K/D: " . $response['kd'] . "</h2>";
-				echo "<h2>Headshots: " . $response['headshots'] . "</h2>";
-				echo "<h2>Wins: " . $response['wins'] . "</h2>";
-			} else {
-				echo "<h2>" . $response . "</h2>";
-			}
-		} else {
-			echo " <form class='modal-content animate' action='csgo.php' method='POST'>
-    					<div class='container'>
-      					  <label for='platform'><b>Platform you play CSGO on:</b></label><br>
-      					  <select style='margin: 5px 0px;' name='platform' id='platform' required>
-  						<option value='steam'>Steam</option>
-					  </select>
-					<br>
-      					  <label for='gamertag'><b>Gamer ID:</b></label>
-      					  <input type='text' placeholder='Enter Gamer ID' name='gamertag' required>
-        
-      					  <button type='submit' style='font-size:15px;'>Submit</button>
-    					</div>
-  				</form>";
-		}
+	$client = new rabbitMQClient("database.ini","testServer");
+
+	$request = array();
+	$request['type'] = "topic_info";
+	$request['id'] = $_GET['id'];
+	$result = $client->send_request($request);
+	if($result == 0)
+	{
+		echo 'This topic does not exist.';
 	}
+	else
+	{
+		echo '<table border="1">
+			  <tr>
+				<th>' . $result['topic_subject'] . '</th>
+			  </tr>';
+	}
+
+	$client = new rabbitMQClient("database.ini","testServer");
+
+	$request = array();
+	$request['type'] = "posts_display";
+	$request['id'] = $_GET['id'];
+	$result = $client->send_request($request);
+		
+	if($result == 0)
+	{
+		echo 'There are no posts in this topic yet.';
+	}
+	else
+	{	
+		while($row = mysql_fetch_assoc($result))
+		{				
+			echo '<tr>';
+				echo '<td class="leftpart">';
+					echo '<h3>' . $row['user_name'] . '/n' . date('m-d-Y h:i', strtotime($row['post_date'])) . '</h3>';
+				echo '</td>';
+				echo '<td class="rightpart">';
+					echo '<h3>' . $row['post_content'] . '</h3>';
+				echo '</td>';
+			echo '</tr>';
+		}
+		
+		//reply form
+		echo '<tr>';
+			echo '<td>';
+				echo '<form method="post" action="reply.php?id=' . $_GET['id'] . '">
+					<label> Reply: </label>
+    					<textarea name="reply-content"></textarea>
+    					<input type="submit" value="Submit reply" />
+				      </form>';
+			echo '</td>';
+		echo '</tr>';
+	}
+}//username
 ?>
+
+	</div><!-- content -->
+</div><!-- wrapper -->
+
 
 <div id="id01" class="modal">
   
