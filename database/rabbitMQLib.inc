@@ -232,7 +232,7 @@ class rabbitMQClient
 			$response = $this->response_queue[$uid];
 			unset($this->response_queue[$uid]);
 			//delete($channel, $callback_queue, if_unused);
-			var_dump($callbackqueue->getName());
+			$callback_queue->delete();
 			return $response;
 		}
 		catch(Exception $e)

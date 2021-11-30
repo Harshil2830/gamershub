@@ -728,3 +728,5 @@ Stack trace:
 2021-11-30  12:12:53pm --- Frontend --- Success: login successful using Username = test3 and Password = test3
 2021-11-30  12:36:04pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
 2021-11-30  12:36:39pm --- Frontend --- Success: login successful using Username = test3 and Password = test3
+2021-12-02  12:09:55pm --- Frontend --- Success: login successful using Username = test3 and Password = test3
+2021-12-02  12:13:32pm --- Frontend --- Success: login successful using Username = test3 and Password = test3
