@@ -1,5 +1,4 @@
 <?php
-//require_once('event_logger.php');
 
 class dataDB
 {

@@ -1,7 +1,7 @@
 <?php
 
 require_once('get_host_info.inc');
-//require_once('event_logger.php');
+
 
 class rabbitMQServer
 {
@@ -178,9 +178,10 @@ class rabbitMQClient
 		$uid = $response->getCorrelationId();
 		if (!isset($this->response_queue[$uid]))
 		{
-			echo  "unknown uid\n";
+			//echo  "unknown uid\n";
 			return true;
 		}
+		//echo  "known uid\n";
 		$this->conn_queue->ack($response->getDeliveryTag());
 		$body = $response->getBody();
 		$payload = json_decode($body, true);
@@ -220,16 +221,18 @@ class rabbitMQClient
 			$callback_queue->declare();
 			$callback_queue->bind($exchange->getName(),$this->routing_key.".response");
 
-			$this->conn_queue = new AMQPQueue($channel);
+						$this->conn_queue = new AMQPQueue($channel);
 			$this->conn_queue->setName($this->queue);
 			$this->conn_queue->bind($exchange->getName(),$this->routing_key);
 
 			$exchange->publish($json_message,$this->routing_key,AMQP_NOPARAM,array('reply_to'=>$callback_queue->getName(),'correlation_id'=>$uid));
-			$this->response_queue[$uid] = "waiting";
+      $this->response_queue[$uid] = "waiting";
 			$callback_queue->consume(array($this,'process_response'));
 
 			$response = $this->response_queue[$uid];
 			unset($this->response_queue[$uid]);
+			//delete($channel, $callback_queue, if_unused);
+			var_dump($callbackqueue->getName());
 			return $response;
 		}
 		catch(Exception $e)
@@ -267,6 +270,7 @@ class rabbitMQClient
 			$this->conn_queue = new AMQPQueue($channel);
 			$this->conn_queue->setName($this->queue);
 			$this->conn_queue->bind($exchange->getName(),$this->routing_key);
+			
 			return $exchange->publish($json_message,$this->routing_key);
 		}
 		catch(Exception $e)
