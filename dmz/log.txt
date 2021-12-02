@@ -1,329 +1,147 @@
-dmz log
-
-2021-11-07  12:08:37am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:08:37am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:37am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:08:37am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:37am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:08:38am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:38am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:08:39am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:38am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:08:39am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:38am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:08:40am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:39am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:08:40am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:39am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:08:41am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:39am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:08:41am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:39am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:08:42am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:40am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:08:42am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:40am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:08:43am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:40am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:08:43am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:41am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:08:44am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:41am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:08:44am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:41am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:08:44am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:41am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:08:45am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:41am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:08:45am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:42am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:08:46am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:42am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:08:46am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:42am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:08:46am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:42am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:08:47am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:42am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:08:47am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:43am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:08:48am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:43am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:08:48am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:43am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:08:49am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:43am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:08:49am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:44am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:08:50am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:44am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:08:51am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:44am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:08:51am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:44am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:08:52am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:44am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:08:52am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:44am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:08:52am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:45am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:18:07am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:45am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:18:08am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:45am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:18:08am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:45am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:18:09am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:45am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:18:09am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:46am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:18:10am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:46am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:18:35am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:46am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:18:36am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:46am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:18:36am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:46am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:18:37am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:46am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:18:37am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:47am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:18:38am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:47am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:18:38am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:47am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:18:39am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:47am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:18:39am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:47am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:18:40am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:48am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:18:40am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:08:48am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:18:40am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:25:53am --- DataBase --- no users matched username
-2021-11-07  12:25:53am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:25:53am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:25:54am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:25:54am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:25:55am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:25:54am --- Database --- Server received request but request type does not match
-2021-11-07  12:25:55am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:25:54am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:25:57am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:25:54am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:25:58am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:36:37am --- DataBase --- no users matched username
-2021-11-07  12:36:37am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:36:37am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:37am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:36:37am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:38am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:36:37am --- Database --- Server received request but request type does not match
-2021-11-07  12:36:38am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:36:37am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:39am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:36:38am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:39am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:36:37am --- Database --- Server received request but request type does not match
-2021-11-07  12:36:40am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:36:38am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:40am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:36:38am --- Database --- Server received request but request type does not match
-2021-11-07  12:36:41am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:36:38am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:42am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:36:38am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:42am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:36:38am --- Database --- Server received request but request type does not match
-2021-11-07  12:36:43am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:36:39am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:43am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:36:39am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:44am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:36:39am --- Database --- Server received request but request type does not match
-2021-11-07  12:36:44am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:36:39am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:45am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:36:39am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:45am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:36:39am --- Database --- Server received request but request type does not match
-2021-11-07  12:36:46am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:36:39am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:46am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:36:40am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:47am --- DMZ --- Server received request but request type does not match
-2021-11-07  12:36:39am --- Database --- Server received request but request type does not match
-2021-11-07  12:36:40am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:40am --- Database --- Server received request but request type does not match
-2021-11-07  12:36:40am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:40am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:40am --- Database --- Server received request but request type does not match
-2021-11-07  12:36:41am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:41am --- Database --- Server received request but request type does not match
-2021-11-07  12:36:41am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:41am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:41am --- Database --- Server received request but request type does not match
-2021-11-07  12:36:41am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:41am --- Database --- Server received request but request type does not match
-2021-11-07  12:36:42am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:42am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:42am --- Database --- Server received request but request type does not match
-2021-11-07  12:36:42am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:42am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:42am --- Database --- Server received request but request type does not match
-2021-11-07  12:36:42am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:43am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:42am --- Database --- Server received request but request type does not match
-2021-11-07  12:36:43am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:43am --- Database --- Server received request but request type does not match
-2021-11-07  12:36:43am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:43am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:43am --- Database --- Server received request but request type does not match
-2021-11-07  12:36:44am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:44am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:44am --- Database --- Server received request but request type does not match
-2021-11-07  12:36:44am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:44am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:44am --- Database --- Server received request but request type does not match
-2021-11-07  12:36:44am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:44am --- Database --- Server received request but request type does not match
-2021-11-07  12:36:45am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:45am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:45am --- Database --- Server received request but request type does not match
-2021-11-07  12:36:45am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:45am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:45am --- Database --- Server received request but request type does not match
-2021-11-07  12:36:45am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:46am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:45am --- Database --- Server received request but request type does not match
-2021-11-07  12:36:46am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:46am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:36:46am --- Rabbitmq --- Server received request but request type does not match
-2021-11-07  12:41:58am --- DataBase --- no users matched username
-2021-11-07  12:43:57am --- DataBase --- no users matched username
-2021-11-09  12:25:16am --- Frontend --- Success: login successful using Username = test3 and Password = test3
-2021-11-09  12:36:07am --- Frontend --- Success: login successful using Username = test3 and Password = test3
-2021-11-09  12:47:14am --- DataBase --- error: could not get data from csgo
-2021-11-09  12:47:15am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  12:47:15am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  12:47:15am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  12:47:15am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  12:47:15am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  12:47:15am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  12:47:16am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  12:47:16am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  12:47:16am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  12:47:16am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  12:47:16am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  12:47:17am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  12:47:17am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  12:47:17am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  12:47:17am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  12:47:17am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  12:47:18am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  12:47:18am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  12:47:18am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  12:47:18am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  12:47:18am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  12:47:18am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  12:47:19am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  12:47:19am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  12:47:19am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  12:47:19am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  12:47:19am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  12:47:20am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  12:56:04am --- DataBase --- error: could not get data from csgo
-2021-11-09  12:56:04am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  12:56:04am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  12:56:05am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  12:56:05am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  12:56:05am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  12:56:05am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  12:56:05am --- DataBase --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:03:07am --- DMZ --- Failed to start request processor: AMQPConnectionException: Socket error: could not connect to host. in /home/khang/git/gamershub/dmz/rabbitMQLib.inc:112
+2021-11-30  11:56:06am --- DMZ --- Failed to start request processor: AMQPConnectionException: Socket error: could not connect to host. in /home/khang/git/gamershub/dmz/rabbitMQLib.inc:112
 Stack trace:
 #0 /home/khang/git/gamershub/dmz/rabbitMQLib.inc(112): AMQPConnection->connect()
-#1 /home/khang/git/gamershub/dmz/listener.php(44): rabbitMQServer->process_requests()
+#1 /home/khang/git/gamershub/dmz/listener.php(45): rabbitMQServer->process_requests()
 #2 {main}
-2021-11-09  01:03:10am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:03:13am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:03:16am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:03:19am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:03:22am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:03:25am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:03:28am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:03:31am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:03:34am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:03:37am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:03:40am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:03:43am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:03:47am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:03:50am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:03:53am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:03:56am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:03:59am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:04:02am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:04:05am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:04:08am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:04:11am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:04:14am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:04:17am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:04:20am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:04:23am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:04:26am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:04:30am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:04:33am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:04:36am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:04:39am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:04:42am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:04:45am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:04:48am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:04:51am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:04:54am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:04:57am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:05:00am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  01:05:03am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-09  11:59:53am --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
-2021-11-09  11:59:51am --- Frontend --- Success: Registration successful using Username = Harshil and Password = Harshil
-2021-11-09  11:59:58am --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
-2021-11-09  12:06:05pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
-2021-11-09  12:06:10pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
-2021-11-09  12:06:21pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
-2021-11-09  12:06:27pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
-2021-11-09  12:09:49pm --- Frontend --- Success: Registration successful using Username = Harshil56 and Password = Harshil56
-2021-11-09  12:09:51pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
-2021-11-09  12:09:56pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
-2021-11-09  12:11:19pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
-2021-11-09  12:11:24pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
-2021-11-09  12:11:53pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
-2021-11-09  12:11:59pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
-2021-11-09  12:15:55pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
-2021-11-09  12:15:53pm --- Frontend --- Error: failed to register using Username = Harshil56 and Password = Harshil56
-2021-11-09  12:16:02pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
-2021-11-09  12:16:29pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
-2021-11-09  12:16:36pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
-2021-11-09  12:19:09pm --- Frontend --- Success: Registration successful using Username = Harshil56 and Password = Harshil56
-2021-11-09  12:19:14pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
-2021-11-09  12:19:21pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
-2021-11-09  12:21:32pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
-2021-11-09  12:21:37pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
-2021-11-09  12:23:30pm --- Frontend --- Success: Registration successful using Username = h56 and Password = h56
-2021-11-09  12:23:33pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
-2021-11-09  12:23:38pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
-2021-11-09  12:28:57pm --- Frontend --- Success: Registration successful using Username = aek28 and Password = aek28
-2021-11-09  12:29:00pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
-2021-11-09  12:29:04pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
-2021-11-09  12:35:39pm --- Frontend --- Success: Registration successful using Username = hss56 and Password = hss56
-2021-11-09  12:35:43pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
-2021-11-09  12:35:51pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
-2021-11-09  12:37:25pm --- Frontend --- Success: Registration successful using Username = hss56 and Password = hss56
-2021-11-09  12:37:27pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
-2021-11-09  12:37:33pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
-2021-11-09  12:51:54pm --- Frontend --- Success: Registration successful using Username = test and Password = test
-2021-11-09  12:51:57pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
-2021-11-09  12:52:02pm --- DMZ --- error: this profile cannot be shown for legal reasons. The user does not play this game or have their profile private. 
-2021-11-09  12:56:09pm --- Frontend --- Error: failed to register using Username = test3 and Password = test3
-2021-11-09  01:00:15pm --- Frontend --- Success: Registration successful using Username = t20 and Password = t20
-2021-11-09  01:00:45pm --- Frontend --- Success: login successful using Username = test3 and Password = test3
+2021-11-30  11:56:09am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  11:56:12am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  11:56:15am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  11:56:18am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  11:56:21am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  11:56:24am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  11:56:27am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  11:56:30am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  11:56:33am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  11:56:36am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  11:56:39am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  11:56:42am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  11:56:45am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  11:56:49am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  11:56:52am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  11:56:55am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  11:56:58am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  11:57:01am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  11:57:04am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  11:57:07am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  11:57:10am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  11:57:13am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  11:57:16am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  11:57:19am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  11:57:22am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  11:57:25am --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  11:50:57am --- Frontend --- Success: login successful using Username = test3 and Password = test3
+2021-11-30  11:59:50am --- DMZ --- error: rabbitMQServer: process_message: exception caught: AMQPQueueException: Server channel error: 404, message: NOT_FOUND - no queue 'dmzQueues_response' in vhost 'test' in /home/khang/git/gamershub/dmz/rabbitMQLib.inc:77
+Stack trace:
+#0 /home/khang/git/gamershub/dmz/rabbitMQLib.inc(77): AMQPQueue->bind()
+#1 [internal function]: rabbitMQServer->process_message()
+#2 /home/khang/git/gamershub/dmz/rabbitMQLib.inc(124): AMQPQueue->consume()
+#3 /home/khang/git/gamershub/dmz/listener.php(45): rabbitMQServer->process_requests()
+#4 {main}
+2021-11-30  12:12:53pm --- Frontend --- Success: login successful using Username = test3 and Password = test3
+2021-11-30  12:30:15pm --- DMZ --- Failed to start request processor: AMQPConnectionException: Socket error: could not connect to host. in /home/khang/git/gamershub/dmz/rabbitMQLib.inc:112
+Stack trace:
+#0 /home/khang/git/gamershub/dmz/rabbitMQLib.inc(112): AMQPConnection->connect()
+#1 /home/khang/git/gamershub/dmz/listener.php(45): rabbitMQServer->process_requests()
+#2 {main}
+2021-11-30  12:30:18pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:30:21pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:30:24pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:30:27pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:30:30pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:30:33pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:30:36pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:30:39pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:30:42pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:30:46pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:30:49pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:30:52pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:30:55pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:30:58pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:31:01pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:31:04pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:31:07pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:31:10pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:31:13pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:31:16pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:31:19pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:31:22pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:31:25pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:31:29pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:31:32pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:31:35pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:31:38pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:31:41pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:31:44pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:31:47pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:31:50pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:31:53pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:31:56pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:31:59pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:32:02pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:34:13pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:34:17pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:34:20pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:34:23pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:34:26pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:34:29pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:34:32pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:34:35pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:34:38pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:34:41pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:34:44pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:34:47pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:34:50pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:34:53pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:35:01pm --- DMZ --- Failed to start request processor: AMQPConnectionException: Socket error: could not connect to host. in /home/khang/git/gamershub/dmz/rabbitMQLib.inc:112
+Stack trace:
+#0 /home/khang/git/gamershub/dmz/rabbitMQLib.inc(112): AMQPConnection->connect()
+#1 /home/khang/git/gamershub/dmz/listener.php(45): rabbitMQServer->process_requests()
+#2 {main}
+2021-11-30  12:35:04pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:35:07pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:35:10pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:35:13pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:35:16pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:35:19pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:35:22pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:35:25pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:35:28pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:35:32pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:35:35pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:35:38pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:35:41pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:35:44pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:35:47pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:35:50pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:35:53pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:35:56pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:35:59pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:36:02pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:36:05pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:36:08pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:36:11pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:36:15pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:36:18pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:36:21pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:36:24pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:36:27pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:36:30pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:36:33pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:36:36pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:36:39pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:36:42pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:36:45pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:36:48pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:36:51pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:36:54pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:36:58pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:37:01pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:37:04pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:37:07pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:37:10pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:36:04pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:36:39pm --- Frontend --- Success: login successful using Username = test3 and Password = test3
+2021-12-02  12:09:55pm --- Frontend --- Success: login successful using Username = test3 and Password = test3
+2021-12-02  12:13:32pm --- Frontend --- Success: login successful using Username = test3 and Password = test3
+2021-12-02  12:17:17pm --- Frontend --- Success: Registration successful using Username = testing and Password = testing
+2021-12-02  12:17:32pm --- Frontend --- Success: login successful using Username = testing and Password = testing

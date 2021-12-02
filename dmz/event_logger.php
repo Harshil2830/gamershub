@@ -22,9 +22,5 @@
     	$frontend = new rabbitMQClient("frontend.ini","testServer");
     	$response = $frontend->publish($request);
     	
-    	//send error to RabbitMQ server
-    	$rbmq = new rabbitMQClient("rabbitMQ.ini","testServer");
-    	$response = $rbmq->publish($request);
-    	
     }
 ?>
