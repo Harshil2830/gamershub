@@ -2,31 +2,65 @@
 session_start();
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<title>Forums Reply</title>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="style.css">
-
 </head>
-<body>
-<span id="session_usr" style="display:none;"><?php if(isset($_SESSION["username"])) {echo $_SESSION["username"];} ?></span>
-<div class="topnav" id="myTopnav">
-  <a href="index.php">CSGO</a>
-  <a href="game2.php">Apex Legends</a>
-  <a href="game3.php">Splitgate</a>
-  <a id="events" href="events.php" style="display:none;">Events</a>
-  <a id="forums" href="forums.php" style="display:none;">Forums</a>
-  <a id="login" style="display:block;" onclick="document.getElementById('id01').style.display='block'">Login</a>
-  <a id="register" style="display:block;" onclick="document.getElementById('id02').style.display='block'">Register</a>
-  <a id="profile" href="profile.php" style="display:none;">Profile</a>
-  <a id="logout" href="logout.php" style="display:none;">Logout</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
 
-<h2 id="notSigned" style="display:block;">Sign in or register an account to create a topic.</h2>
+<body class="bg-secondary text-white">
+
+<span id="session_usr" style="display:none;"><?php if(isset($_SESSION["username"])) {echo $_SESSION["username"];} ?></span>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand">
+      <img src="logo.jpg" alt="Logo" style="width:40px;" class="rounded">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link mx-1" href="index.php">CS:GO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-1" href="game2.php">Apex Legends</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-1" href="game3.php">Splitgate</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-1" href="events.php" id="events" style="display:none;">Events</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-1" href="forums.php" id="forums" style="display:none;">Forums</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active bg-success text-light mx-1" href="#" id="login" style="display:block;" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active bg-light text-dark mx-1" href="#" id="register" style="display:block;" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-1" href="profile.php" id="profile" style="display:none;">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active bg-danger text-light mx-1" href="logout.php" id="logout" style="display:none;">Logout</a>
+        </li>  
+      </ul>
+  </div>
+</div>
+</nav>
+
+<div class="container-fluid">
+
+<h2 id="notSigned" style="display:block;">Sign in or register an account to reply to a post.</h2>
 
 <script>
 if (document.getElementById('session_usr').innerHTML != ""){
@@ -78,75 +112,75 @@ if(isset($_SESSION["username"])){
 	</div><!-- content -->
 </div><!-- wrapper -->
 
-
-<div id="id01" class="modal">
-  
-  <form class="modal-content animate" action="login.php" method="POST">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-    </div>
-
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-        
-      <button type="submit" style="font-size:15px;">Login</button>
-    </div>
-  </form>
 </div>
 
-<div id="id02" class="modal">
-  
-  <form class="modal-content animate" action="register.php" method="POST">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-    </div>
 
-    <div class="container">
+<div class="modal" id="loginModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark">
     
-      <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Enter Email" name="email" required>
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h3 class="modal-title">Login</h3>
+        <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal"></button>
+      </div>
       
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-        
-      <button type="submit" style="font-size:15px;">Register</button>
+      <!-- Modal body -->
+      <div class="modal-body">
+  
+  <form action="login.php" method="POST">
+    <div class="mb-3 mt-3">
+      <label for="uname" class="form-label"><b>Username</b></label>
+      <input type="text" class="form-control" placeholder="Enter Username" name="uname" required>
     </div>
+    <div class="mb-3">
+      <label for="psw" class="form-label"><b>Password</b></label>
+      <input type="password" class="form-control" placeholder="Enter Password" name="psw" required>
+    </div>
+      <button type="submit" class="btn btn-success" style="width:100%;">Login</button>
   </form>
+  
+      </div>
+      
+    </div>
+  </div>
 </div>
 
-<script>
-// Get the modal
-var modal = document.getElementById('id01');
-var modal2 = document.getElementById('id02');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-    if (event.target == modal2) {
-        modal2.style.display = "none";
-    }
-}
-</script>
-
-<script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script>
+<div class="modal" id="registerModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark">
+    
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h3 class="modal-title">Register</h3>
+        <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal"></button>
+      </div>
+      
+      <!-- Modal body -->
+      <div class="modal-body">
+    
+  <form action="register.php" method="POST">
+    <div class="mb-3 mt-3">
+      <label for="email" class="form-label"><b>Email</b></label>
+      <input type="text" class="form-control" placeholder="Enter Email" name="email" required>
+    </div>
+    <div class="mb-3">
+      <label for="uname" class="form-label"><b>Username</b></label>
+      <input type="text" class="form-control" placeholder="Enter Username" name="uname" required>
+    </div>
+    <div class="mb-3">
+      <label for="psw" class="form-label"><b>Password</b></label>
+      <input type="password" class="form-control" placeholder="Enter Password" name="psw" required>
+    </div>
+      <button type="submit" class="btn btn-success" style="width:100%;">Register</button>
+    </div>
+  </form>
+  
+      </div>
+  
+    </div>
+  </div>
+</div>
 
 </body>
 </html>

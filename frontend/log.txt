@@ -1,41 +1,24 @@
 Harshil Shah Frontend Log
 -----------------------------------------------------------------------------------------------------------------------------------
 
-2021-11-23  12:34:19pm --- Frontend --- Failed to start request processor: AMQPConnectionException: Socket error: could not connect to host. in /home/webserver/git/gamershub/frontend/rabbitMQLib.inc:113
+
+2021-11-30  12:30:14pm --- Frontend --- Failed to start request processor: AMQPConnectionException: Socket error: could not connect to host. in /home/webserver/git/gamershub/frontend/rabbitMQLib.inc:113
 Stack trace:
 #0 /home/webserver/git/gamershub/frontend/rabbitMQLib.inc(113): AMQPConnection->connect()
 #1 /home/webserver/git/gamershub/frontend/event_logger_listener.php(38): rabbitMQServer->process_requests()
 #2 {main}
-2021-11-23  12:34:22pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-23  12:34:25pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-23  12:34:28pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-23  12:34:31pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-23  12:34:34pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-23  12:34:37pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-23  12:34:40pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-23  12:35:33pm --- Frontend --- Failed to start request processor: AMQPConnectionException: Socket error: could not connect to host. in /home/webserver/git/gamershub/frontend/rabbitMQLib.inc:113
+2021-11-30  12:30:17pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:30:20pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:35:15pm --- Frontend --- Failed to start request processor: AMQPConnectionException: Socket error: could not connect to host. in /home/webserver/git/gamershub/frontend/rabbitMQLib.inc:113
 Stack trace:
 #0 /home/webserver/git/gamershub/frontend/rabbitMQLib.inc(113): AMQPConnection->connect()
 #1 /home/webserver/git/gamershub/frontend/event_logger_listener.php(38): rabbitMQServer->process_requests()
 #2 {main}
-2021-11-23  12:35:36pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-23  12:35:39pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-23  12:35:42pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-23  12:35:46pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-23  12:35:49pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-23  12:35:52pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-23  12:35:55pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-23  12:35:58pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-23  12:36:01pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-23  12:36:04pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-23  12:36:07pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-23  12:36:10pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-23  12:36:13pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-23  12:36:16pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-23  12:36:19pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-23  12:36:22pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-23  12:36:25pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-23  12:36:29pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-23  12:36:32pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-23  12:36:35pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
-2021-11-23  12:36:38pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:35:18pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:35:21pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:35:24pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:35:27pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:35:30pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:35:34pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:35:37pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
+2021-11-30  12:35:40pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
