@@ -230,6 +230,31 @@ public function addidsplitgate($username,$platform,$gamertag)
 
 	return 0;
 }
+public function displaycategory()
+{
 
+	
+    	
+	$statement = "select * from categories";
+	$response = $this->datadb->query($statement);
+	$result = array();
+	if($response->num_rows > 0){
+		while ($row = $response->fetch_assoc())
+		{
+			$result[$row['cat_id']] = $row['cat_name'];
+	
+		}
+		return $result;
+	}
+	else {
+		return 0; 
+	}
+
+	
+	$event = date("Y-m-d") . "  " . date("h:i:sa") . " --- DataBase --- " . "error: could not get data from csgo" . "\n";
+	log_event($event);
+	echo "error: could not get data from csgo:".$this->datadb->error.PHP_EOL;
+	return 0;//error: could not get data from csgo
+}
 }
 ?>

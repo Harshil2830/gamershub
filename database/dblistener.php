@@ -59,6 +59,12 @@ function addsplitgate($username,$platform,$gamertag)
     $login = new dataDB();
     return $login->addidsplitgate($username,$platform,$gamertag);
 }
+
+function category()
+{
+    $login = new dataDB();
+    return $login->displaycategory();
+}
 function requestProcessor($request)
 {
   echo "received request".PHP_EOL;
@@ -90,7 +96,8 @@ function requestProcessor($request)
       return addapex($request['username'],$request['platform'],$request['gamertag']);
     case "splitgate_id":
       return addsplitgate($request['username'],$request['platform'],$request['gamertag']);
-    
+    case "forums":
+    	return category();
     /* default:
       $event = date("Y-m-d") . "  " . date("h:i:sa") . " --- Database --- " . "Server received request but request type does not match" . "\n";
       log_event($event);

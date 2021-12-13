@@ -730,3 +730,7 @@ Stack trace:
 2021-11-30  12:36:39pm --- Frontend --- Success: login successful using Username = test3 and Password = test3
 2021-12-02  12:09:55pm --- Frontend --- Success: login successful using Username = test3 and Password = test3
 2021-12-02  12:13:32pm --- Frontend --- Success: login successful using Username = test3 and Password = test3
+2021-12-02  12:17:17pm --- Frontend --- Success: Registration successful using Username = testing and Password = testing
+2021-12-02  12:17:32pm --- Frontend --- Success: login successful using Username = testing and Password = testing
+2021-12-12  11:47:44pm --- Frontend --- Success: login successful using Username = test3 and Password = test3
+2021-12-12  11:51:06pm --- Frontend --- Success: login successful using Username = test3 and Password = test3

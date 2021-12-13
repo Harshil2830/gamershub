@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Friend System</title>
+</head>
+<style type="text/css">
+	html,
+	body,
+	div,
+	form,
+	input,
+	legend,
+	label,
+	button,
+	ul,
+	li {
+		margin: 0;
+		padding: 0;
+	}
+
+	form,
+	fieldset {
+		border: 0;
+	}
+
+	.wrap {
+		position: relative;
+		margin: 100px auto;
+		width: 700px;
+		height: 400px;
+		overflow: hidden;
+	}
+
+	input {
+		width: 300px;
+		height: 36px;
+		border: 3px solid blue;
+		border-radius: 3px;
+		font-weight: bold;
+	}
+
+	button {
+		width: 120px;
+		height: 42px;
+		border: 0;
+		padding: 8px;
+		margin-left: -5px;
+		background-color: blue;
+		font-weight: bold;
+		font-size: 16px;
+		color: white;
+		border-radius: 10px;
+	}
+
+	.info {
+		position: relative;
+		top: -10px;
+		left: 14px;
+		width: 305px;
+	}
+
+	ul {
+		list-style: none;
+	}
+
+	li {
+		padding: 3px 10px;
+		border-bottom: 1px dotted #333;
+		background-color: #ddd;
+	}
+
+	li:hover {
+		cursor: pointer;
+		background-color: green;
+	}
+</style>
+
+<body>
+	<div class="wrapper">
+		<h2>Friend System</h2>
+		<div margin="20px">
+
+			<input size="20" id="name"> <button type="button" id="button" onclick="searchClick()">search</button>
+		</div>
+		<div class="info" id="info">
+
+		</div>
+		<input type="hidden" id="user_id" name="user_id" value="1">
+		<ul>
+
+
+			<?php
+
+                require "databaseConfig.php";
+
+				$mysqli = new mysqli(HOST, 'root', PASS, DBNAME);
+				if ($mysqli->connect_error) {
+
+					die('Connect Error (' . $mysqli->connect_errno . ') ' . $mysqli->connect_error);
+
+				}
+
+				$sql = 'SELECT f.id as id,u.username as username,u.gender as gender FROM friend_relation f 
+				LEFT JOIN user u 
+				ON f.friend_id = u.id order by f.friend_id asc';
+
+				$result = $mysqli->query($sql);
+				if($result->num_rows >0){
+					while($row = $result->fetch_assoc()){
+					echo "<li>";
+					echo "<input type='hidden' value='{$row['id']}' >";
+					if($row['gender'] == 1){
+						echo '<img src="./female_icon.png"></img>';
+					}else{
+						echo '<img src="./male_icon.png"></img>';
+					}
+					echo "<span>{$row['username']}</span>";
+					echo "<span>
+							<a href='javascript:del({$row['id']})'>delete</a>
+						  </span>";
+					echo "</li>";
+					}
+				}
+
+				
+			 	 $mysqli->close();
+			?>
+		</ul>
+	</div>
+	<script type="text/javascript">
+
+			function searchClick() {
+				document.getElementById("info").innerHTML = "";
+				/* Act on the event */
+				if (document.getElementById("name").value == "") return;
+				var ajax = new XMLHttpRequest();
+				ajax.open('get','searchUser.php?name='+document.getElementById("name").value);
+				ajax.send();
+				ajax.onreadystatechange = function () {
+					if (ajax.readyState==4 &&ajax.status==200) {
+						　　　　//    alert(data);
+						console.log(ajax.responseText);
+							var array = new Array();
+							array = JSON.parse(ajax.responseText);
+							let infoContent = "<ul id='tip_ul'>"
+							for (var i = 0; i < array.length; i++) {
+								infoContent += "<li id='li" + array[i]['id'] +  "'>" + array[i]['username'] +
+									"<input type='hidden' name='friend_id' " + "value=" + array[i]['id'] + ">" +
+									"<input type='hidden' name='friend_name' " + "value=" + array[i]['username'] + ">"
+									+ "</li>";
+							}
+							infoContent +="</ul>";
+							document.getElementById("info").innerHTML =  infoContent;
+							let childrenUl = document.getElementById("tip_ul").children;
+							for(let i = 0;i< childrenUl.length;i++){
+								console.log(document.getElementsByName("friend_id")[i].value);
+								console.log(document.getElementsByName("friend_name")[i].value);
+								document.getElementById(childrenUl[i].id).onclick = function(){
+									if (confirm("Are you sure add friend " + childrenUl[i].innerText + " ?")) {
+										var ajax = new XMLHttpRequest();
+
+										ajax.open('get','addFriend.php?user_id='+document.getElementById("user_id").value + "&friend_id="
+										+ document.getElementsByName("friend_id")[i].value + "&friend_name=" + document.getElementsByName("friend_name")[i].value);
+
+										ajax.send();
+
+										ajax.onreadystatechange = function () {
+											if (ajax.readyState==4 &&ajax.status==200) {
+												var result = JSON.parse(ajax.responseText);
+
+												if (result["result"]) {
+													location.reload();
+												} else {
+
+													alert(result["info"]);
+												}
+											}
+										}
+									}
+								}
+							}	
+						}
+				　　}
+				}
+			
+	</script>
+	<script type="text/javascript">
+
+		function del(id) {
+			if (confirm("are your sure delete this friend？")) {
+
+				var ajax = new XMLHttpRequest();
+				let url = 'deleteFriend.php?id='+ id;
+				ajax.open('get',url);
+				ajax.send();
+				ajax.onreadystatechange = function () {
+					if (ajax.readyState==4 &&ajax.status==200) {
+						var result = JSON.parse(ajax.responseText);
+						if (result["result"]) {
+							location.reload();
+						} else {
+							alert(result["info"]);
+						}
+					}
+				}
+
+			}
+		}
+	</script>
+</body>
+
+</html>
