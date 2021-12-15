@@ -734,3 +734,48 @@ Stack trace:
 2021-12-02  12:17:32pm --- Frontend --- Success: login successful using Username = testing and Password = testing
 2021-12-12  11:47:44pm --- Frontend --- Success: login successful using Username = test3 and Password = test3
 2021-12-12  11:51:06pm --- Frontend --- Success: login successful using Username = test3 and Password = test3
+2021-12-14  10:33:17pm --- Frontend --- Success: login successful using Username = test3 and Password = test3
+2021-12-14  10:37:49pm  --- Frontend --- Error: Failed to create topic
+2021-12-14  10:41:16pm  --- Frontend --- Error: Failed to create topic
+2021-12-14  10:49:34pm  --- Frontend --- Error: Failed to create topic
+2021-12-14  10:53:38pm  --- Frontend --- Error: Failed to create topic
+2021-12-14  10:58:17pm  --- Frontend --- Error: Failed to create topic
+2021-12-14  11:02:46pm  --- Frontend --- Error: Failed to create topic
+2021-12-14  11:04:58pm  --- Frontend --- Error: Failed to create topic
+2021-12-14  11:06:28pm  --- Frontend --- Error: Failed to create topic
+2021-12-14  11:07:22pm  --- Frontend --- Error: Failed to create topic
+2021-12-14  11:17:13pm --- Frontend --- Success: login successful using Username = test3 and Password = test3
+2021-12-14  11:32:42pm --- Frontend --- Success: login successful using Username = test3 and Password = test3
+2021-12-14  11:59:13pm --- Frontend --- Success: login successful using Username = test3 and Password = test3
+2021-12-15  02:52:42pm --- Frontend --- Success: login successful using Username = test3 and Password = test3
+2021-12-15  02:53:00pm  --- Frontend --- Error: Failed to create topic
+2021-12-15  02:55:13pm  --- Frontend --- Error: Failed to create topic
+2021-12-15  03:02:25pm  --- Frontend --- Error: Failed to create topic
+2021-12-15  03:05:52pm  --- Frontend --- Error: Failed to create topic
+2021-12-15  03:08:03pm  --- Frontend --- Error: Failed to create topic
+2021-12-15  03:18:38pm --- Frontend --- Success: login successful using Username = test3 and Password = test3
+2021-12-15  03:19:15pm --- Frontend --- Success: login successful using Username = test3 and Password = test3
+2021-12-15  03:29:16pm --- Frontend --- Success: login successful using Username = test3 and Password = test3
+2021-12-15  03:34:17pm --- Frontend --- Success: login successful using Username = test3 and Password = test3
+2021-12-15  03:34:29pm --- Frontend --- Success: New topic created.
+2021-12-15  03:56:40pm  --- Frontend --- Error: Failed to save reply, try again later.
+2021-12-15  03:58:35pm --- Frontend --- Success: Your reply has been saved.
+2021-12-15  03:59:22pm --- Frontend --- Success: Your reply has been saved.
+2021-12-15  04:04:00pm --- Frontend --- Success: New topic created.
+2021-12-15  04:04:17pm --- Frontend --- Success: Your reply has been saved.
+2021-12-15  04:04:54pm --- Frontend --- Success: New topic created.
+2021-12-15  04:05:22pm --- Frontend --- Success: Your reply has been saved.
+2021-12-15  04:05:44pm --- Frontend --- Success: New topic created.
+2021-12-15  04:06:07pm --- Frontend --- Success: New topic created.
+2021-12-15  04:06:16pm --- Frontend --- Success: Your reply has been saved.
+2021-12-15  04:06:41pm  --- Frontend --- Error: failed to login using Username = Harshil56 and Password = Harshil56
+2021-12-15  04:06:53pm  --- Frontend --- Error: failed to login using Username = Harshil56 and Password = Harshil56
+2021-12-15  04:07:34pm  --- Frontend --- Error: failed to login using Username = test1 and Password = test1
+2021-12-15  04:07:56pm --- Frontend --- Success: login successful using Username = test3 and Password = test3
+2021-12-15  04:08:11pm --- Frontend --- Success: login successful using Username = test2 and Password = test2
+2021-12-15  04:08:30pm --- Frontend --- Success: Registration successful using Username = forum and Password = forum
+2021-12-15  04:08:45pm --- Frontend --- Success: login successful using Username = forum and Password = forum
+2021-12-15  04:09:01pm --- Frontend --- Success: Your reply has been saved.
+2021-12-15  04:09:26pm --- Frontend --- Success: Your reply has been saved.
+2021-12-15  04:09:51pm --- Frontend --- Success: New topic created.
+2021-12-15  04:10:08pm --- Frontend --- Success: Your reply has been saved.

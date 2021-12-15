@@ -232,9 +232,6 @@ public function addidsplitgate($username,$platform,$gamertag)
 }
 public function displaycategory()
 {
-
-	
-    	
 	$statement = "select * from categories";
 	$response = $this->datadb->query($statement);
 	$result = array();
@@ -251,10 +248,161 @@ public function displaycategory()
 	}
 
 	
-	$event = date("Y-m-d") . "  " . date("h:i:sa") . " --- DataBase --- " . "error: could not get data from csgo" . "\n";
+	$event = date("Y-m-d") . "  " . date("h:i:sa") . " --- DataBase --- " . "error: could not get data to display categories" . "\n";
 	log_event($event);
-	echo "error: could not get data from csgo:".$this->datadb->error.PHP_EOL;
-	return 0;//error: could not get data from csgo
+	echo "error: could not get data to display categories:".$this->datadb->error.PHP_EOL;
+	return 0;//error: could not get data to display categories
+}
+
+public function displaytopics($id)
+{
+    $cid = $this->datadb->real_escape_string($id);
+	$statement = "select * from topics where topic_cat = $cid";
+	$response = $this->datadb->query($statement);
+	$result = array();
+    $counter = 0;
+	if($response->num_rows > 0){
+		while ($row = $response->fetch_assoc())
+		{
+			$result[$counter] = array($row["topic_id"], $row["topic_subject"], $row["topic_date"]);
+            $counter++;
+		}
+		return $result;
+	}
+	else {
+		return 0; 
+	}
+
+	
+	$event = date("Y-m-d") . "  " . date("h:i:sa") . " --- DataBase --- " . "error: could not get data to display topic info" . "\n";
+	log_event($event);
+	echo "error: could not get data to display topic info:".$this->datadb->error.PHP_EOL;
+	return 0;//error: could not get data to display topic info
+}
+
+public function displaytopic($id)
+{
+    $cid = $this->datadb->real_escape_string($id);
+	$statement = "select topic_id, topic_subject from topics where topic_id = $cid";
+	$response = $this->datadb->query($statement);
+	$result = array();
+	if($response->num_rows > 0){
+		while ($row = $response->fetch_assoc())
+		{
+			$result["id"] = $row["topic_subject"];
+		}
+		return $result;
+	}
+	else {
+		return 0; 
+	}
+
+	
+	$event = date("Y-m-d") . "  " . date("h:i:sa") . " --- DataBase --- " . "error: could not get data to display topic info" . "\n";
+	log_event($event);
+	echo "error: could not get data to display topic info:".$this->datadb->error.PHP_EOL;
+	return 0;//error: could not get data to display topic info
+}
+
+public function displayposts($id)
+{
+    $cid = $this->datadb->real_escape_string($id);
+	$statement = "select 
+        posts.post_topic,
+        posts.post_content,
+        posts.post_date,
+        posts.post_by,
+        users.user_id,
+        users.username
+    FROM
+        posts
+    LEFT JOIN
+        users
+    ON
+        posts.post_by = users.user_id
+    WHERE
+        posts.post_topic = $cid";
+	$response = $this->datadb->query($statement);
+	$result = array();
+    $counter = 0;
+    if(!$response){
+    	echo"error: " . $this->datadb->error;
+    }
+	if($response->num_rows > 0){
+		while ($row = $response->fetch_assoc())
+		{
+			$result[$counter] = array($row["username"], $row["post_date"], $row["post_content"]);
+            $counter++;
+		}
+		var_dump($result);
+		return $result;
+	}
+	else {
+		return 0; 
+	}
+
+	
+	$event = date("Y-m-d") . "  " . date("h:i:sa") . " --- DataBase --- " . "error: could not get data to display posts" . "\n";
+	log_event($event);
+	echo "error: could not get data to display posts:".$this->datadb->error.PHP_EOL;
+	return 0;//error: could not get data to display posts
+}
+
+public function createtopic($topic_subject, $topic_cat, $post_content, $username)
+{
+    $tsub = $this->datadb->real_escape_string($topic_subject);
+    $tcat = $this->datadb->real_escape_string($topic_cat);
+    $pcon = $this->datadb->real_escape_string($post_content);
+    $user = $this->datadb->real_escape_string($username);
+
+    $statement = "INSERT INTO topics(topic_subject, topic_date, topic_cat, topic_by) VALUES('$tsub', NOW(), '$tcat', '$user')";
+    $response = $this->datadb->query($statement);
+    if(!$response){
+        return 0;
+    }
+    else {
+        $topicid = $this->datadb->insert_id;   
+        $statement = "INSERT INTO posts(post_content, post_date, post_topic, post_by) VALUES('$pcon', NOW(), '$topicid', '$user')";
+        $response = $this->datadb->query($statement);
+        if(!$response){
+            return 0;
+        }
+        else {
+            $result = array();
+            $result["topicid"] = $topicid;
+            return $result;
+        }
+    }
+
+    
+    $event = date("Y-m-d") . "  " . date("h:i:sa") . " --- DataBase --- " . "error: could not create topic" . "\n";
+    log_event($event);
+    echo "error: could not create topic:".$this->datadb->error.PHP_EOL;
+    return 0;//error: could not create topic
+}
+
+public function reply($id, $reply_content, $username)
+{
+    $rid = $this->datadb->real_escape_string($id);
+    $re_con = $this->datadb->real_escape_string($reply_content);
+    $user = $this->datadb->real_escape_string($username);
+
+	$statement = "INSERT INTO posts(post_content, post_date, post_topic, post_by) VALUES ('$re_con', NOW(), '$rid', '$user')";
+
+
+	$response = $this->datadb->query($statement);
+	if(!$response){
+		return 0;
+	}
+	else {
+        return 1;
+	}
+
+	
+	$event = date("Y-m-d") . "  " . date("h:i:sa") . " --- DataBase --- " . "error: could not add reply" . "\n";
+	log_event($event);
+	echo "error: could not add reply:".$this->datadb->error.PHP_EOL;
+	return 0;//error: could not add reply
 }
 }
 ?>

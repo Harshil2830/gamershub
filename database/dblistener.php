@@ -65,6 +65,37 @@ function category()
     $login = new dataDB();
     return $login->displaycategory();
 }
+
+function topics($id)
+{
+    $login = new dataDB();
+    return $login->displaytopics($id);
+}
+
+function topicsinfo($id)
+{
+    $login = new dataDB();
+    return $login->displaytopic($id);
+}
+
+function posts($id)
+{
+    $login = new dataDB();
+    return $login->displayposts($id);
+}
+
+function create($topic_subject, $topic_cat, $post_content, $username)
+{
+    $login = new dataDB();
+    return $login->createtopic($topic_subject, $topic_cat, $post_content, $username);
+}
+
+function create_reply($id, $reply_content, $username)
+{
+    $login = new dataDB();
+    return $login->reply($id, $reply_content, $username);
+}
+
 function requestProcessor($request)
 {
   echo "received request".PHP_EOL;
@@ -98,6 +129,16 @@ function requestProcessor($request)
       return addsplitgate($request['username'],$request['platform'],$request['gamertag']);
     case "forums":
     	return category();
+    case "topics_display":
+        return topics($request['id']);
+    case "topics_info":
+        return topicsinfo($request['id']);
+    case "posts_display":
+        return posts($request['id']);
+    case "create_topic":
+        return create($request['topic_subject'], $request['topic_cat'], $request['post_content'], $request['username']);
+    case "reply":
+        return create_reply($request['id'], $request['reply-content'], $request['username']);
     /* default:
       $event = date("Y-m-d") . "  " . date("h:i:sa") . " --- Database --- " . "Server received request but request type does not match" . "\n";
       log_event($event);
@@ -111,4 +152,5 @@ $server = new rabbitMQServer("database.ini","testServer");
 $server->process_requests('requestProcessor');
 exit();
 ?>
+
 

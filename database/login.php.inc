@@ -34,6 +34,14 @@ public function validateLogin($username,$password)
 			echo "passwords match for $username".PHP_EOL;
 			$gamer = array();
 			
+			$statement = "select user_id from users where username='$un'";
+			$response = $this->logindb->query($statement);
+			if($response->num_rows > 0){
+    				while ($row = $response->fetch_assoc()){
+        				$gamer["user_id"] = $row["user_id"];
+    				}
+			}
+			
 			$statement = "select * from csgo where username='$un'";
 			$csgoresponse = $this->logindb->query($statement);
 			if($csgoresponse->num_rows > 0){
