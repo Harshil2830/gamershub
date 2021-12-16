@@ -1,4 +1,3 @@
-#!/usr/bin/php
 <?php
 require_once('event_logger.php');
 require_once('path.inc');
