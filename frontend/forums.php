@@ -103,17 +103,13 @@ if(isset($_SESSION["username"])){
 		echo '<table border="1">
 			  <tr>
 				<th>Category</th>
-				<th>Last topic</th>
 			  </tr>';	
 			
-		while($row = mysql_fetch_assoc($response))
+		foreach($response as $key => $value)
 		{				
 			echo '<tr>';
 				echo '<td class="leftpart">';
-					echo '<h3><a href="category.php?id">' . $row['cat_name'] . '</a></h3>' . $row['cat_description'];
-				echo '</td>';
-				echo '<td class="rightpart">';
-					echo '<a href="topic.php?id=">Topic subject</a> at 10-10';
+					echo '<h3><a href="category.php?id=' . $key . '&cat=' . $value . '">' . $value . '</a></h3>';
 				echo '</td>';
 			echo '</tr>';
 		}

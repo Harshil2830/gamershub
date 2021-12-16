@@ -86,34 +86,20 @@ if(isset($_SESSION["username"])){
 	require_once('rabbitMQLib.inc');
 	require_once('event_logger.php');
 
-	$client = new rabbitMQClient("database.ini","testServer");
 
-	$request = array();
-	$request['type'] = "cat_display";
-	$request['id'] = $_GET['id'];
-	$result = $client->send_request($request);
-	if($result == 0)
-	{
-		echo '<h1>This category does not exist.</h1>';
-	}
-	else
-	{
-		while($row = mysql_fetch_assoc($result))
-		{
-			echo '<h2>Topics in "' . $row['cat_name'] . '" category</h2>';
-		}
-	}
+	echo '<h2>Topics in "' . $_GET['cat'] . '" category</h2>';
+
 
 	$client = new rabbitMQClient("database.ini","testServer");
 
 	$request = array();
 	$request['type'] = "topics_display";
 	$request['id'] = $_GET['id'];
-	$result = $client->send_request($request);
+	$response = $client->send_request($request);
 		
-	if($result == 0)
+	if($response == 0)
 	{
-		echo 'There are no topics in this category yet.';
+		echo 'There are no topics in this category yet.<br>';
 	}
 	else
 	{
@@ -124,18 +110,20 @@ if(isset($_SESSION["username"])){
 				<th>Created At</th>
 			  </tr>';	
 			
-		while($row = mysql_fetch_assoc($result))
+		foreach($response as $key => $value)
 		{				
 			echo '<tr>';
 				echo '<td class="leftpart">';
-					echo '<h3><a href="topic.php?id=' . $row['topic_id'] . '">' . $row['topic_subject'] . '</a></h3>';
+					echo '<h3><a href="topic.php?id=' . $value[0] . '">' . $value[1] . '</a></h3>';
 				echo '</td>';
 				echo '<td class="rightpart">';
-					echo date('d-m-Y', strtotime($row['topic_date']));
+					echo date('d-m-Y', strtotime($value[2]));
 				echo '</td>';
 			echo '</tr>';
 		}
+		echo '</table><br>';
 	}
+	echo '<a href="create_topic.php" class="btn btn-info" role="button">CLICK HERE</a> to create a topic.';
 }//username
 ?>
 

@@ -25,16 +25,16 @@ if($response == 1){
 	$usr = $_POST['uname'];
 	$email = $_POST['email'];
 	$output = shell_exec("python3 emailscript.py $usr $email");
-	header("Location: http://www.gamehub.com/success.php");
+	header("Location: https://www.gamecave.com/success.php");
 	exit();
 } else {
 	$error = date("Y-m-d") . "  " . date("h:i:sa") . " --- Frontend --- " . "Error: failed to register using Username = " . $_POST["uname"] . " and Password = " . $_POST["psw"] . "\n";
 	log_event($error);
 	//session_destroy();
-	header("Location: http://www.gamehub.com/failed.php");
+	header("Location: https://www.gamecave.com/failed.php");
 	exit();
 }
-header("Location: http://www.gamehub.com/failed.php");
+header("Location: https://www.gamecave.com/failed.php");
 exit();
 }
 ?>

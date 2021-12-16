@@ -22,7 +22,6 @@ $response = $client->send_request($request);
 if($response == 0){
 	$error = date("Y-m-d") . "  " . date("h:i:sa") . "  --- Frontend --- " . "Error: failed to login using Username = " . $_POST["uname"] . " and Password = " . $_POST["psw"] . "\n";
 	log_event($error);
-	
 } else {
 	$event = date("Y-m-d") . "  " . date("h:i:sa") . " --- Frontend --- " . "Success: login successful using Username = " . $_POST["uname"] . " and Password = " . $_POST["psw"] . "\n";
 	log_event($event);
@@ -48,7 +47,7 @@ if($response == 0){
 	}
 }
 
-header("Location: http://www.gamehub.com/game2.php");
+header("Location: https://www.gamecave.com/forums.php");
 exit();		
 }
 

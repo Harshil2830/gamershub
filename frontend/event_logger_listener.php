@@ -1,4 +1,3 @@
-#!/usr/bin/php
 <?php
 require_once('event_logger.php');
 require_once('path.inc');
@@ -17,7 +16,7 @@ function requestProcessor($request)
   if(!isset($request['type']))
   {
     $event = date("Y-m-d") . "  " . date("h:i:sa") . " --- Frontend --- " . "ERROR: unsupported message type" . "\n";
-    //log_event($event);
+    log_event($event);
     return "ERROR: unsupported message type";
   }
   switch ($request['type'])

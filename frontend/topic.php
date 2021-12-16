@@ -90,20 +90,20 @@ if(isset($_SESSION["username"])){
 	$client = new rabbitMQClient("database.ini","testServer");
 
 	$request = array();
-	$request['type'] = "topic_info";
+	$request['type'] = "topics_info";
 	$request['id'] = $_GET['id'];
-	$result = $client->send_request($request);
-	if($result == 0)
+	$response = $client->send_request($request);
+	if($response == 0)
 	{
 		echo 'This topic does not exist.';
+		echo '<a href="create_topic.php" class="btn btn-info" role="button">CLICK HERE</a> to create a topic.';
 	}
 	else
 	{
-		echo '<table border="1">
+			echo '<table border="1">
 			  <tr>
-				<th>' . $result['topic_subject'] . '</th>
+				<th>' . $response["id"] . '</th>
 			  </tr>';
-	}
 
 	$client = new rabbitMQClient("database.ini","testServer");
 
@@ -118,14 +118,14 @@ if(isset($_SESSION["username"])){
 	}
 	else
 	{	
-		while($row = mysql_fetch_assoc($result))
+		foreach($result as $key => $value)
 		{				
 			echo '<tr>';
 				echo '<td class="leftpart">';
-					echo '<h3>' . $row['user_name'] . '/n' . date('m-d-Y h:i', strtotime($row['post_date'])) . '</h3>';
+					echo '<h3>' . $value[0] . '<br>' . date('m-d-Y h:i', strtotime($value[1])) . '</h3>';
 				echo '</td>';
 				echo '<td class="rightpart">';
-					echo '<h3>' . $row['post_content'] . '</h3>';
+					echo '<h3>' . $value[2] . '</h3>';
 				echo '</td>';
 			echo '</tr>';
 		}
@@ -141,6 +141,9 @@ if(isset($_SESSION["username"])){
 			echo '</td>';
 		echo '</tr>';
 	}
+	
+	echo '</table>';
+    }
 }//username
 ?>
 

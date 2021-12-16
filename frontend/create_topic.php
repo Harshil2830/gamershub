@@ -91,13 +91,12 @@ if(isset($_SESSION["username"])){
 			Category:'; 
 		
 		echo '<select name="topic_cat">';
-			while($row = mysql_fetch_assoc($result))
-			{
-				echo '<option value="' . $row['cat_id'] . '">' . $row['cat_name'] . '</option>';
-			}
+			echo '<option value="1">CSGO</option>';
+			echo '<option value="2">APEX LEGENDS</option>';
+			echo '<option value="3">SPLITGATE</option>';
 		echo '</select>';	
 			
-		echo 'Message: <textarea name="post_content"></textarea>
+		echo 'Post: <textarea name="post_content"></textarea>
 			<input type="submit" value="Create topic">
 		     </form>';
 	}
@@ -115,6 +114,7 @@ if(isset($_SESSION["username"])){
 		$request['topic_subject'] = $_POST["topic_subject"];
 		$request['topic_cat'] = $_POST["topic_cat"];
 		$request['post_content'] = $_POST["post_content"];
+		$request['username'] = $_SESSION["user_id"];
 		$response = $client->send_request($request);
 		
 		if($response == 0){
@@ -124,6 +124,7 @@ if(isset($_SESSION["username"])){
 	
 		} else {
 			echo "<h1> Success: New topic created. </h1>";
+			echo "<a href='topic.php?id=" . $response['topicid'] . "' class='btn btn-info' role='button'>Click Here</a> to see your new topic.";
 			$event = date("Y-m-d") . "  " . date("h:i:sa") . " --- Frontend --- " . "Success: New topic created." . "\n";
 			log_event($event);
 		}

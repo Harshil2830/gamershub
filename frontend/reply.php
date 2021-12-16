@@ -80,7 +80,7 @@ if (document.getElementById('session_usr').innerHTML != ""){
 <?php
 
 if(isset($_SESSION["username"])){
-	if($_SERVER['REQUEST_METHOD'] != 'POST'){
+	if($_SERVER['REQUEST_METHOD'] == 'POST'){
 		require_once('path.inc');
 		require_once('get_host_info.inc');
 		require_once('rabbitMQLib.inc');
@@ -91,7 +91,7 @@ if(isset($_SESSION["username"])){
 		$request = array();
 		$request['type'] = "reply";
 		$request['id'] = $_GET['id'];
-		$request['username'] = $_SESSION["username"];
+		$request['username'] = $_SESSION["user_id"];
 		$request['reply-content'] = $_POST['reply-content'];
 		$response = $client->send_request($request);
 		
@@ -105,6 +105,8 @@ if(isset($_SESSION["username"])){
 			$event = date("Y-m-d") . "  " . date("h:i:sa") . " --- Frontend --- " . "Success: Your reply has been saved." . "\n";
 			log_event($event);
 		}
+	} else {
+		echo "<h2>Go to a topic to submit a reply!</h2>";
 	}
 }//username
 ?>
