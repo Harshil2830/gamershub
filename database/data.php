@@ -334,7 +334,6 @@ public function displayposts($id)
 			$result[$counter] = array($row["username"], $row["post_date"], $row["post_content"]);
             $counter++;
 		}
-		var_dump($result);
 		return $result;
 	}
 	else {

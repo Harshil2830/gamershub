@@ -29,7 +29,9 @@ public function validateLogin($username,$password)
 	while ($row = $response->fetch_assoc())
 	{
 		echo "checking password for $username".PHP_EOL;
-		if ($row["password"] == $pw)
+		$stored = $row['password'];
+		$output = password_verify($pw,$stored);
+		if ($output)
 		{
 			echo "passwords match for $username".PHP_EOL;
 			$gamer = array();
@@ -72,7 +74,7 @@ public function validateLogin($username,$password)
 			return $gamer;// password match
 		}
 		$event = date("Y-m-d") . "  " . date("h:i:sa") . " --- DataBase --- " . "passwords did not match for $username" . "\n";
-		//log_event($event);
+		log_event($event);
 		echo "passwords did not match for $username".PHP_EOL;
 	}}
 	

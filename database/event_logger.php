@@ -19,12 +19,12 @@
     	$response = $db->publish($request);
     	
     	//send error to dmz server
-    	$dmz = new rabbitMQClient("dmz.ini","testServer");
-    	$response = $dmz->publish($request);
+    	//$dmz = new rabbitMQClient("dmz.ini","testServer");
+    	//$response = $dmz->publish($request);
     	
     	//send error to RabbitMQ server
-    	$rbmq = new rabbitMQClient("rabbitMQ.ini","testServer");
-    	$response = $rbmq->publish($request);
+    	//$rbmq = new rabbitMQClient("rabbitMQ.ini","testServer");
+    	//$response = $rbmq->publish($request);
     	
     }
 ?>

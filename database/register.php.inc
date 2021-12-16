@@ -21,8 +21,9 @@ public function validateregister($username,$password,$email)
 	$un = $this->registerdb->real_escape_string($username);
 	$pw = $this->registerdb->real_escape_string($password);
 	$em = $this->registerdb->real_escape_string($email);
+	$output = password_hash($pw, PASSWORD_DEFAULT);
 	$statement = "INSERT INTO users(username, password, email)
-	VALUES('$un','$pw','$em')";
+	VALUES('$un','$output','$em')";
 
 	$response = $this->registerdb->query($statement);
 	if($response == TRUE)

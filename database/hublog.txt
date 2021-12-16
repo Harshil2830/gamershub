@@ -779,3 +779,45 @@ Stack trace:
 2021-12-15  04:09:26pm --- Frontend --- Success: Your reply has been saved.
 2021-12-15  04:09:51pm --- Frontend --- Success: New topic created.
 2021-12-15  04:10:08pm --- Frontend --- Success: Your reply has been saved.
+2021-12-15  05:14:22pm --- Frontend --- Success: Registration successful using Username = hash and Password = hash
+2021-12-15  05:15:22pm --- Frontend --- Success: Registration successful using Username = hash1 and Password = hash1
+2021-12-15  05:23:05pm --- Frontend --- Success: Registration successful using Username = hash and Password = hash
+2021-12-15  05:28:09pm --- Frontend --- Success: Registration successful using Username = hash and Password = hash
+2021-12-15  05:31:14pm --- Frontend --- Success: login successful using Username = hash and Password = hash
+2021-12-15  05:35:38pm  --- Frontend --- Error: failed to login using Username = hash and Password = has
+2021-12-15  06:13:26pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
+2021-12-15  06:17:00pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
+2021-12-15  06:26:45pm  --- Frontend --- Error: failed to login using Username = hash and Password = has
+2021-12-15  06:32:22pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
+2021-12-15  06:44:05pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
+2021-12-15  09:29:34pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
+2021-12-15  09:38:50pm  --- Frontend --- Error: failed to login using Username = hash and Password = has
+2021-12-15  09:43:22pm  --- Frontend --- Error: failed to login using Username = hash and Password = has
+2021-12-15  09:55:28pm  --- Frontend --- Error: failed to login using Username = hash and Password = has
+2021-12-15  09:56:21pm  --- Frontend --- Error: failed to login using Username = hash and Password = has
+2021-12-15  10:04:48pm  --- Frontend --- Error: failed to login using Username = hash and Password = has
+2021-12-15  10:08:29pm  --- Frontend --- Error: failed to login using Username = has and Password = uyjglkjgh
+2021-12-15  10:15:50pm  --- Frontend --- Error: failed to login using Username = test3 and Password = test
+2021-12-15  10:16:16pm  --- Frontend --- Error: failed to login using Username = test3 and Password = test
+2021-12-15  10:18:40pm  --- Frontend --- Error: failed to login using Username = test3 and Password = test
+2021-12-15  10:18:56pm  --- Frontend --- Error: failed to login using Username = test3 and Password = test
+2021-12-15  10:20:12pm  --- Frontend --- Error: failed to login using Username = testing and Password = test3
+2021-12-15  10:21:00pm  --- Frontend --- Error: failed to login using Username = testing and Password = test3
+2021-12-15  10:22:33pm  --- Frontend --- Error: failed to login using Username = testing and Password = test4
+2021-12-15  10:23:04pm  --- Frontend --- Error: failed to login using Username = testing and Password = test4
+2021-12-15  10:24:21pm  --- Frontend --- Error: failed to login using Username = testing and Password = test3
+2021-12-15  10:29:50pm  --- Frontend --- Error: failed to login using Username = test3 and Password = testing
+2021-12-15  10:42:32pm  --- Frontend --- Error: failed to login using Username = test1 and Password = test3
+2021-12-15  10:43:28pm  --- Frontend --- Error: failed to login using Username = test3 and Password = test
+2021-12-15  10:44:17pm  --- Frontend --- Error: failed to login using Username = stat and Password = stat
+2021-12-15  10:48:52pm  --- Frontend --- Error: failed to login using Username = stats and Password = stats
+2021-12-15  10:49:44pm  --- Frontend --- Error: failed to login using Username = test3 and Password = test
+2021-12-15  10:52:41pm  --- Frontend --- Error: failed to login using Username = why and Password = work
+2021-12-15  10:53:54pm  --- Frontend --- Error: failed to login using Username = ser and Password = ser
+2021-12-15  10:54:17pm  --- Frontend --- Error: failed to login using Username = test3 and Password = test
+2021-12-15  10:55:20pm  --- Frontend --- Error: failed to login using Username = hash and Password = has
+2021-12-15  10:56:31pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
+2021-12-15  11:03:47pm --- Frontend --- failed to send message to exchange: Socket error: could not connect to host.
+2021-12-15  11:06:17pm  --- Frontend --- Error: failed to login using Username = test3 and Password = test
+2021-12-15  11:08:30pm  --- Frontend --- Error: failed to login using Username = hash and Password = has
+2021-12-15  11:24:15pm --- DMZ --- failed to send message to exchange: Socket error: could not connect to host.
