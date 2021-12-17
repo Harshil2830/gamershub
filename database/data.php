@@ -403,5 +403,100 @@ public function reply($id, $reply_content, $username)
 	echo "error: could not add reply:".$this->datadb->error.PHP_EOL;
 	return 0;//error: could not add reply
 }
+
+public function searchUser($friend_name)
+{
+	$fn = $this->datadb->real_escape_string($friend_name);
+	$sql = "select * from users where username = '$fn'";
+	$result = $this->datadb->query($sql);
+	$data = array();
+	if($result->num_rows >0){
+	    while($row = $result->fetch_assoc()){
+		//$item = array();
+
+		$data['user_id']=$row['user_id'];
+		$data['username']=$row['username'];
+	    }
+	return $data;
+	}
+	return 0;
+}
+
+public function addfriend($user_id, $friend_id, $friend_name, $username)
+{
+	$uid = $this->datadb->real_escape_string($user_id);
+	$fid = $this->datadb->real_escape_string($friend_id);
+	$fn = $this->datadb->real_escape_string($friend_name);
+	$un = $this->datadb->real_escape_string($username);
+	$sql = "select count(*) as friend_count from request where user_id='$uid' and friend_id = '$fid'";
+	$result = $this->datadb->query($sql);
+	$row = $result->fetch_assoc();
+	
+	if($row['friend_count'] > 0){
+	    return 0;
+	}
+	else{
+       	 $insert_sql = "INSERT INTO friend_relation(user_id,friend_id,friend_name) VALUES ('$uid','$fid','$fn')";
+	         $result = $this->datadb->query($insert_sql);
+	    	 if(!$result){
+			return 0;
+			}
+	    	else {
+       		$insert_sql = "INSERT INTO friend_relation(user_id,friend_id,friend_name) VALUES ('$fid','$uid','$un')";
+	         $result = $this->datadb->query($insert_sql);
+	    	 if(!$result){
+			return 0;
+			}
+	    	else {
+       		return 1;
+		}
+		}
+	    
+	    
+	}
+
+}
+
+public function deletefriend($user_id, $friend_id, $friend_name)
+{
+	$uid = $this->datadb->real_escape_string($user_id);
+	$fid = $this->datadb->real_escape_string($friend_id);
+	$fn = $this->datadb->real_escape_string($friend_name);
+	
+	    $delete_sql = "delete from friend_relation where user_id = '$uid' and friend_id = '$fid'";
+	    $result = $this->datadb->query($delete_sql);
+	    if(!$result){
+		echo'error '.$this->datadb->error;
+		return 0;
+		}
+	    else {
+       	 return 1;
+		}
+}
+
+
+
+public function displayfriends($user_id)
+{
+   	$uid = $this->datadb->real_escape_string($user_id);
+	$statement = "select * from friend_relation where user_id = '$uid'";
+	$response = $this->datadb->query($statement);
+	$counter = 0;
+	$result = array();
+	if($response->num_rows > 0){
+		while ($row = $response->fetch_assoc())
+		{
+			$result[$counter] = array($row["friend_name"], $row["friend_id"]);
+            		$counter++;
+		}
+		return $result;
+	}
+	else {
+		return 0; 
+	}
+}
+
+
+
 }
 ?>

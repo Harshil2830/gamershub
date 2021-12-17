@@ -5,7 +5,7 @@ $user_id = $_GET['user_id'];
 $friend_id = $_GET['friend_id']; 
 $friend_name = $_GET['friend_name']; 
 
-$mysqli = new mysqli(HOST, 'root', PASS, DBNAME);
+$mysqli = new mysqli("127.0.0.1","root","Root666!","accounts");
 if ($mysqli->connect_error) {
     die('Connect Error (' . $mysqli->connect_errno . ') ' . $mysqli->connect_error);
 }

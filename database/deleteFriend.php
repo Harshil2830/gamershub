@@ -3,7 +3,7 @@
 require "databaseConfig.php";
 $id = $_GET['id'];  // name from input label
 
-$mysqli = new mysqli(HOST, 'root', PASS, DBNAME);
+$mysqli = new mysqli("127.0.0.1","root","Root666!","accounts");
 if ($mysqli->connect_error) {
     die('Connect Error (' . $mysqli->connect_errno . ') ' . $mysqli->connect_error);
 }

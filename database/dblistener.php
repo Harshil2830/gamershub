@@ -96,6 +96,38 @@ function create_reply($id, $reply_content, $username)
     return $login->reply($id, $reply_content, $username);
 }
 
+function add_friend($user_id,$friend_id,$friend_name, $username)
+{
+    $login = new dataDB();
+    return $login->addfriend($user_id,$friend_id,$friend_name, $username);
+}
+
+function search_Users($friend_name)
+{
+    $login = new dataDB();
+    return $login->searchUser($friend_name);
+
+}
+
+function delete_friend($user_id,$friend_id,$friend_name)
+{
+    $login = new dataDB();
+    return $login->deletefriend($user_id,$friend_id,$friend_name);
+
+}
+
+
+
+function display_friends($user_id)
+{
+    $login = new dataDB();
+    return $login->displayfriends($user_id);
+
+}
+
+
+
+
 function requestProcessor($request)
 {
   echo "received request".PHP_EOL;
@@ -139,6 +171,15 @@ function requestProcessor($request)
         return create($request['topic_subject'], $request['topic_cat'], $request['post_content'], $request['username']);
     case "reply":
         return create_reply($request['id'], $request['reply-content'], $request['username']);
+    case "search_users":
+    	return search_Users($request['friend_name']);
+    case "add_friend":
+    	return add_friend($request['user_id'], $request['friend_id'], $request['friend_name'], $request['username']);
+    case "delete_friend":
+    	return delete_friend($request['user_id'], $request['friend_id'], $request['friend_name'] );
+    case "displayfriends":
+    	return display_friends($request['user_id']);
+    
     /* default:
       $event = date("Y-m-d") . "  " . date("h:i:sa") . " --- Database --- " . "Server received request but request type does not match" . "\n";
       log_event($event);

@@ -2,4 +2,4 @@
 define("HOST","localhost");  
 define("USER","root");  
 define("PASS","");
-define("DBNAME","php_learning");
+define("accounts","php_learning");
