@@ -30,7 +30,7 @@ if($response == 1){
 	//log_event($error);
 }
 
-header("Location: https://gamecave.com/index.php");
+header("Location: https://www.gamecave.com/index.php");
 die();		
 }
 ?>

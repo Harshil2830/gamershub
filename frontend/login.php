@@ -47,7 +47,7 @@ if($response == 0){
 	}
 }
 
-header("Location: https://gamecave.com/forums.php");
+header("Location: https://www.gamecave.com/forums.php");
 exit();		
 }
 
