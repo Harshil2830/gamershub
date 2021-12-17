@@ -4,13 +4,12 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>CS:GO Stats</title>
+<title>Forums</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 </head>
 
 <body class="bg-secondary text-white">
@@ -28,7 +27,7 @@ session_start();
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
           <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active bg-warning text-dark mx-1" href="index.php">CS:GO</a>
+          <a class="nav-link mx-1" href="index.php">CS:GO</a>
         </li>
         <li class="nav-item">
           <a class="nav-link mx-1" href="game2.php">Apex Legends</a>
@@ -49,11 +48,11 @@ session_start();
           <a class="nav-link active bg-light text-dark mx-1" href="#" id="register" style="display:block;" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link mx-1" href="profile.php" id="profile" style="display:none;">Profile</a>
+          <a class="nav-link active bg-light text-dark mx-1" href="profile.php" id="profile" style="display:none;">Profile</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active bg-danger text-light mx-1" href="logout.php" id="logout" style="display:none;">Logout</a>
-        </li>
+        </li>  
       </ul>
   </div>
 </div>
@@ -61,9 +60,9 @@ session_start();
 
 <div class="container-fluid">
 
-<h1> CS:GO </h1>
+<h1><u> Profile </u></h1>
 
-<h2 id="notSigned" style="display:block;">Sign in or register an account to see your game stats.</h2>
+<h2 id="notSigned" style="display:block;">Sign in or register an account to see the forums.</h2>
 
 <script>
 if (document.getElementById('session_usr').innerHTML != ""){
@@ -77,47 +76,58 @@ if (document.getElementById('session_usr').innerHTML != ""){
 }
 </script>
 
+
+<div id="wrapper">
+	<div id="content">
+	
+	<h1> Search a Friend to add </h3>
 <?php
-	if(isset($_SESSION["username"])){
-		if(isset($_SESSION["csgogamertag"]) && isset($_SESSION["csgoplatform"])){
-			require_once('path.inc');
-			require_once('get_host_info.inc');
-			require_once('rabbitMQLib.inc');
+if(isset($_SESSION["username"])){
+		//displaying the form
+		echo '<form class="bg-dark m-3 p-3" style="width:40%;" method="post" action="">';
+			
+		echo '<label for="uname" class="form-label"><b>Username</b></label>
+      		      <input type="text" class="form-control" placeholder="Enter Username" name="uname" required><br>';
+			
+		echo '<input type="submit" value="Search User">
+		     </form>';
+		     
+	if($_SERVER['REQUEST_METHOD'] == 'POST')
+	{	
+		require_once('path.inc');
+		require_once('get_host_info.inc');
+		require_once('rabbitMQLib.inc');
+		require_once('event_logger.php');
 
-			$client = new rabbitMQClient("database.ini","testServer");
+		$client = new rabbitMQClient("database.ini","testServer");
 
-			$request = array();
-			$request['type'] = "csgo";
-			$request['platform'] = $_SESSION["csgoplatform"];
-			$request['gamertag'] = $_SESSION["csgogamertag"];
-			$response = $client->send_request($request);
-		 
-			if(isset($response["kills"])) {
-				echo "<h2>Kills: " . $response['kills'] . "</h2>";
-				echo "<h2>Deaths: " . $response['deaths'] . "</h2>";
-				echo "<h2>K/D: " . $response['kd'] . "</h2>";
-				echo "<h2>Headshots: " . $response['headshots'] . "</h2>";
-				echo "<h2>Wins: " . $response['wins'] . "</h2>";
-			} else {
-				echo "<h2>" . $response . "</h2>";
-			}
+		$request = array();
+		$request['type'] = "search_users";
+		$request['friend_name'] = $_POST["uname"];
+		$response = $client->send_request($request);
+		
+		if($response == 0){
+			echo "<h2> User does not exist.</h2>";	
 		} else {
-			echo " <form class='bg-dark' action='csgo.php' method='POST'>
-    					<div class='mb-3 mt-3'>
-      					  <label for='platform'><b>Platform you play CSGO on:</b></label><br>
-      					  <select name='platform' id='platform' required>
-  						<option value='steam'>Steam</option>
-					  </select>
-					</div>
-					<div class='mb-3'>
-      					  <label for='gamertag'><b>Gamer ID:</b></label>
-      					  <input type='text' placeholder='Enter Gamer ID' name='gamertag' required>
-        				</div>
-      					  <button type='submit' class='btn btn-success'>Submit</button>
-  				</form>";
+			echo "<br>";
+			echo '<table border="1" class="bg-dark m-3 p-3">';				
+			echo '<tr>';
+				echo '<td class="p-3">';
+					echo "<h3>" . $response["username"] . "<h3>";
+				echo '</td>';
+				echo '<td class="p-3">';
+					echo '<button class="bg-success text-light"><a class="bg-success text-light" href="addfriend.php?id=' . $response["user_id"] . '&friend=' . $response["username"] . '"> Add Friend </a></button>';
+				echo '</td>';
+			echo '</tr>';
 		}
 	}
+}
 ?>
+
+
+	</div><!-- content -->
+</div><!-- wrapper -->
+
 
 </div>
 
@@ -180,6 +190,7 @@ if (document.getElementById('session_usr').innerHTML != ""){
       <input type="password" class="form-control" placeholder="Enter Password" name="psw" required>
     </div>
       <button type="submit" class="btn btn-success" style="width:100%;">Register</button>
+    </div>
   </form>
   
       </div>
@@ -187,11 +198,6 @@ if (document.getElementById('session_usr').innerHTML != ""){
     </div>
   </div>
 </div>
-
-
-<script type="text/javascript" src="/arrowchat/external.php?type=djs" charset="utf-8"></script>
-<script type="text/javascript" src="/arrowchat/external.php?type=js" charset="utf-8"></script>
-
 
 </body>
 </html>
